@@ -1,0 +1,1 @@
+Im Spikes Ordner werden Code Snippets und Tests, die mit dem Endprodukt nichts zu tun haben, abgespeichert.

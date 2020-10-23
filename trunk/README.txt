@@ -1,0 +1,1 @@
+Im Trunk Ordner werden alle Softwareaspekte die mit dem Projekt im Zusammenhang stehen, abgespeichert
