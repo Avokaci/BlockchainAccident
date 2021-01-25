@@ -2,65 +2,107 @@ pragma solidity ^0.5.0;
 
 contract Accident {
   uint public count=0;
-  string datumUhrzeit;
+  string datum;
+  string uhrzeit;
   string ort;
-  bool verletzte;
-  bool andereSachschaeden;
   string zeugen;
 
-  function setUnfalldaten (string memory _datumUhrzeit, string memory _ort, bool _verletzte, bool _andereSachschaeden, string memory _zeugen) public{
-    datumUhrzeit=_datumUhrzeit;
+  function setUnfalldaten (string memory _datum, string memory _uhrzeit, string memory _ort, string memory _zeugen) public{
+    datum=_datum;
+    uhrzeit=_uhrzeit;
     ort=_ort;
-    verletzte=_verletzte;
-    andereSachschaeden=_andereSachschaeden;
     zeugen=_zeugen;
   }
 
-  struct versicherungsnehmerDaten{
-    uint versicherungsid;
+  struct versicherungsnehmerdaten{
     string versName;
+    string versVorname;
     string versAdr;
-    uint versTel;
-    bool vorsteuerabzug;
+    string versTel;
   }
-  mapping(uint => versicherungsnehmerDaten) public arrVerDaten;
+  event VersicherungAdded(
+    string versName,
+    string versVorname,
+    string versAdr,
+    string versTel
+  );
+  mapping(uint => versicherungsnehmerdaten) public arrVerdaten;
 
-  function addVersicherungsnehmerDaten(string memory _nameVname, string memory _adr, uint _tel,bool _vorsteuerabzug) public {
-    count++;
-    arrVerDaten[count] = versicherungsnehmerDaten(count,_nameVname,_adr,_tel,_vorsteuerabzug);
+  function setVersicherungsnehmerdaten(string memory _name,string memory _vname, string memory _adr, string memory _tel) public {
+    arrVerdaten[count] = versicherungsnehmerdaten(_name,_vname,_adr,_tel);
+    emit VersicherungAdded(_name,_vname,_adr,_tel);
   }
-  struct fahrzeugsdaten{
-    uint fahrzeugid;
+
+
+  struct fahrzeugdaten{
     string markeType;
     string kennzeichen;
   }
-  mapping (uint => fahrzeugsdaten) public arrFahrzeugsdaten;
-  function addFahrzeugDaten(string memory _markeTyp, string memory _kennzeichen) public{
-    arrFahrzeugsdaten[count] = fahrzeugsdaten(count, _markeTyp, _kennzeichen);
-  }
-  struct fahrersdaten{
-    uint fahrerid;
-    string fahrerName;
-    string fahrerAdr;
-    uint fuehrerscheinnr;
-    string klasse;
-    string ausgestellt;
-    string gueltigAbBis;
-  }
-  mapping (uint => fahrersdaten) public arrFahrersdaten;
-  function addFahrersdaten(string memory _nameVname, string memory _adr, uint _fuehrerscheinnr,
-    string memory _klasse, string memory _ausgestellt, string memory _gueltigAbBis) public {
-      arrFahrersdaten[count]= fahrersdaten(count, _nameVname, _adr, _fuehrerscheinnr, _klasse, _ausgestellt, _gueltigAbBis);
+  event FahrzeugdatenAdded(
+    string markeType,
+    string kennzeichen
+  );
+  mapping (uint => fahrzeugdaten) public arrFahrzeugdaten;
+
+
+  function setFahrzeugdaten(string memory _markeTyp, string memory _kennzeichen) public{
+    arrFahrzeugdaten[count] = fahrzeugdaten(_markeTyp, _kennzeichen);
+    emit FahrzeugdatenAdded(_markeTyp, _kennzeichen);
   }
 
+  struct versicher{
+    uint versNr;
+    string agent;
+    uint nrGrKarte;
+    string gueltigBis;
+  }
+  event VersicherAdded(
+    uint versNr,
+    string agent,
+    uint nrGrKarte,
+    string gueltigBis
+    );
+  mapping (uint => versicher) public arrVersicher;
+  function setVersicher(uint _versNr, string memory _agent, uint _nrGrKarte, string memory _gueltig) public{
+    arrVersicher[count]=versicher(_versNr,_agent,_nrGrKarte,_gueltig);
+    emit VersicherAdded(_versNr,_agent,_nrGrKarte,_gueltig);
+  }
+
+  
+
   struct schaden{
-    uint id;
     string sichtbareSchaeden;
     string bemerkungen;
   }
-  mapping (uint => schaden) arrSchaden;
-  function addSchaden(string memory _sichtbareSchaeden, string memory _bemerkungen) public{
-    arrSchaden[count]=schaden(count, _sichtbareSchaeden, _bemerkungen);
+  event SchadenAdded(
+    string sichtbareSchaeden,
+    string bemerkungen
+  );
+  mapping (uint => schaden) public arrSchaden;
+  function setSchadenBemerkungen(string memory _sichtbareSchaeden, string memory _bemerkungen) public{
+    arrSchaden[count++]=schaden(_sichtbareSchaeden, _bemerkungen);
+    emit SchadenAdded(_sichtbareSchaeden, _bemerkungen);
+  }
+
+  function getUnfalldaten() public view returns(string memory, string memory, string memory, string memory){
+    return (datum, uhrzeit, ort,zeugen);
+  }
+
+  function getVersicherungsnehmerdaten(uint _id) public view returns (string memory,string memory, string memory, string memory){
+    return (arrVerdaten[_id].versName,arrVerdaten[_id].versVorname, arrVerdaten[_id].versAdr, arrVerdaten[_id].versTel);
+  }
+
+  function getFahrzeugdaten(uint _id) public view returns(string memory, string memory){
+    return (arrFahrzeugdaten[_id].markeType, arrFahrzeugdaten[_id].kennzeichen);
+  }
+
+  function getVersicher(uint _id) public view returns(uint,string memory, uint, string memory){
+    return (arrVersicher[_id].versNr, arrVersicher[_id].agent, arrVersicher[_id].nrGrKarte, arrVersicher[_id].gueltigBis);
+  }
+
+  
+  function getSchadenBemerkungen(uint _id) public view returns(string memory, string memory){
+    return (arrSchaden[_id].sichtbareSchaeden, arrSchaden[_id].bemerkungen);
   }
 
 }
