@@ -1,0 +1,22 @@
+{
+  "name": "comp_6626_assignment_3",
+  "version": "1.0.0",
+  "description": "Bootstrap Police Entry Form",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jerrywoohu/COMP_6626_Assignment_3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jerrywoohu/COMP_6626_Assignment_3/issues"
+  },
+  "homepage": "https://github.com/jerrywoohu/COMP_6626_Assignment_3#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1"
+  }
+}
