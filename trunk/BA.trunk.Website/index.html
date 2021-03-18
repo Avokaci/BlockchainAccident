@@ -84,7 +84,7 @@
     <div class="col-md-8">
       <h4 class="mb-3">Standort & Datum </h4>
 
-      <form>
+      <form action="fahrzeugA.html">
         
         <div class="row">
           <div class="col-md-6 mb-3">
@@ -133,8 +133,8 @@
              <div class="col-md-2 mb-3">
               <label for="state">Verletzte?</label>
               <select class="custom-select d-block w-100" id="state" required>
-                <option value="">No</option>
-                <option>Yes</option>
+                <option value="No">No</option>
+                <option value="Yes">Yes</option>
               </select>
           </div>
         </div>
@@ -142,11 +142,11 @@
         <div class="row">
           <div class="col-md-6 mb-3">
             <label for="email">Unfallort</label>
-            <input type="text" class="form-control" id="email" placeholder="(Straße, Haus-Nr. bzw. Kilometerstein)">
+            <input type="text" class="form-control" id="email" placeholder="(Straße, Haus-Nr. bzw. Kilometerstein)" required>
           </div>
           <div class="col-md-2 mb-3">
             <label for="hw-classification">PLZ</label>
-            <input type="text" class="form-control" placeholder="1170" value="" >
+            <input type="text" class="form-control" placeholder="1170" value="" required>
           </div>
           
         </div>
@@ -163,9 +163,9 @@
             
             <div class="input-group">
               <div class="btn-group btn-block" role="group">
-                        <input id="toggle-on" name="toggle" type="radio">
+                        <input id="toggle-on" name="toggle" type="radio" required>
                      <label for="toggle-on">Ja</label>
-                     <input id="toggle-off" name="toggle" type="radio">
+                     <input id="toggle-off" name="toggle" type="radio" required>
                        <label for="toggle-off">Nein</label>
               </div>
             </div>
@@ -180,13 +180,10 @@
         <hr class="mb-4">
 
         <div class="row">
-          <div class="col-6 text-left">
-      
+          <div class="col-6 text-left">      
           </div>
-          <div class="col-6 text-right">
-           
-  <input type="button" name="b1" value="Next"  onclick="location.href='fahrzeugA.html'">
- 
+          <div class="col-6 text-right">           
+             <input type="submit" value="Next">
           </div>
         </div>
 

@@ -81,7 +81,7 @@
 
     <div class="col-md-8">
       <h4 class="mb-3">FAHRZEUG A</h4>
-      <form>
+      <form action="fahrzeugB.html">
 
 
         <h5 class="mt-4">Versicherungsnehmer/Versicherter (siehe Versicherungsbescheinigung)</h5>
@@ -89,24 +89,24 @@
           <div class="col-12 mb-4">
             <label>Name</label>
             <div class="input-group">
-              <input type="text" class="form-control">
+              <input type="text" class="form-control" required>
             </div>
           </div>
               <div class="col-12 mb-4">
             <label>Vorname</label>
             <div class="input-group">
-              <input type="text" class="form-control">
+              <input type="text" class="form-control" required>
             </div>
           </div>
               <div class="col-12 mb-4">
             <label>Anschrift</label>
             <div class="input-group">
-              <input type="text" class="form-control">
+              <input type="text" class="form-control" required>
             </div>
           </div>
                  <div class="col-md-2 mb-3">
             <label for="hw-classification">PLZ</label>
-            <input type="text" class="form-control" placeholder="1170" value="" >
+            <input type="text" class="form-control" placeholder="1170" value="" required>
           </div>
            <div class="col-md-5 mb-3">
             <label for="country">Land</label>
@@ -143,8 +143,8 @@
              <div class="col-md-2 mb-3">
               <label for="state">Besteht Berechtigung zum Vorsteuerabzug??</label>
               <select class="custom-select d-block w-100" id="state" required>
-                <option value="">Ja</option>
-                <option>Nein</option>
+                <option value="Yes">Ja</option>
+                <option value="No">Nein</option>
               </select>
           </div>
         </div>
@@ -153,7 +153,7 @@
           <div class="col-12 mb-4">
             <label>Telefon oder E-Mail</label>
             <div class="input-group">
-              <input type="text" class="form-control">
+              <input type="text" class="form-control" required>
             </div>
           </div>
         </div>
@@ -164,13 +164,13 @@
           <div class="col-12 mb-4">
             <label>Marke,Typ</label>
             <div class="input-group">
-              <input type="text" class="form-control">
+              <input type="text" class="form-control" required>
             </div>
           </div>
               <div class="col-12 mb-4">
             <label>Amtl. Kennzeichen</label>
             <div class="input-group">
-              <input type="text" class="form-control">
+              <input type="text" class="form-control" required>
             </div>
           </div>
         </div>
@@ -181,25 +181,25 @@
           <div class="col-12 mb-4">
             <label>Versicherer</label>
             <div class="input-group">
-              <input type="text" class="form-control">
+              <input type="text" class="form-control" required>
             </div>
           </div>
               <div class="col-12 mb-4">
             <label>Vers.-Nr:</label>
             <div class="input-group">
-              <input type="text" class="form-control">
+              <input type="text" class="form-control" required>
             </div>
           </div>
               <div class="col-12 mb-4">
             <label>Agent</label>
             <div class="input-group">
-              <input type="text" class="form-control">
+              <input type="text" class="form-control" required>
             </div>
           </div>
                 <div class="col-12 mb-4">
             <label>Nr. der Grünen Karte:</label>
             <div class="input-group">
-              <input type="text" class="form-control">
+              <input type="text" class="form-control" required>
             </div>
           </div>
             <div class="col-md-6 mb-3">
@@ -211,9 +211,9 @@
             <label>Besteht eine Vollkaskoversicherung? </label> 
             <div class="input-group">
               <div class="btn-group btn-block" role="group">
-                        <input id="toggle-on" name="toggle" type="radio">
+                        <input id="toggle-on" name="toggle" type="radio" required>
                      <label for="toggle-on">Ja</label>
-                     <input id="toggle-off" name="toggle" type="radio">
+                     <input id="toggle-off" name="toggle" type="radio" required>
                        <label for="toggle-off">Nein</label>
               </div>
             </div>
@@ -228,33 +228,33 @@
           <div class="col-12 mb-4">
             <label>Name</label>
             <div class="input-group">
-              <input type="text" class="form-control">
+              <input type="text" class="form-control" required>
             </div>
           </div>
               <div class="col-12 mb-4">
             <label>Vorname</label>
             <div class="input-group">
-              <input type="text" class="form-control">
+              <input type="text" class="form-control" required>
             </div>
           </div>
               <div class="col-12 mb-4">
             <label>Adresse</label>
             <div class="input-group">
-              <input type="text" class="form-control">
+              <input type="text" class="form-control" required>
             </div>
           </div>
                 <div class="col-12 mb-4">
             <label>Führerschein-Nr:</label>
             <div class="input-group">
-              <input type="text" class="form-control">
+              <input type="text" class="form-control" required>
             </div>
             <div class="col-md-6 mb-3">
             <label for="dateofaccident">Klasse</label>
-                          <input type="text" class="form-control">
+                          <input type="text" class="form-control" required> 
           </div>
               <div class="col-md-6 mb-3">
             <label for="dateofaccident">ausgestellt durch</label>
-                          <input type="text" class="form-control">
+                          <input type="text" class="form-control" required>
           </div>
             
           </div>
@@ -273,9 +273,7 @@
           
   <p>Klicken Sie auf den Button "Datei auswählen", um eine Datei hochzuladen:</p>
 
-<form action="/action_page.php">
-  <input type="file" id="myFile" name="filename">
-</form>
+
    </div>
            
     </div>
@@ -310,7 +308,7 @@
           </div>
           <div class="col-6 text-right">
            
-  <input type="button" name="b1" value="Next"  onclick="location.href='fahrzeugB.html'">
+            <input type="submit" value="Next">
  
           </div>
         </div>
