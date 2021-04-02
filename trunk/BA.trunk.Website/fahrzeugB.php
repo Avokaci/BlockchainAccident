@@ -1,91 +1,25 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <!-- <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors"> -->
-    <!-- <meta name="generator" content="Jekyll v3.8.5"> -->
-    <title>Europaeischer Unfallbericht</title>
-
-    <!-- <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/checkout/"> -->
-
-    <!-- Bootstrap core CSS -->
-    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-
-
-    <style>
-      h2 {
-        font-variant: small-caps;
-        font-family: serif;
-      }
-      footer {
-        font-family: serif;
-      }
-    </style>
-    <!-- Custom styles for this template -->
-    <!-- <link href="form-validation.css" rel="stylesheet"> -->
-  </head>
-  <body class="bg-light">
-    <div class="container">
-  <div class="py-5 text-center">
-    <img class="d-block mx-auto mb-4" src="https://www.technikum-wien.at/sites/default/files/logo-300x160.png" alt="" width="144" height="72">
-    <h2>Europaeischer Unfallbericht</h2>
-    <p class="lead">Blockchain Accident	Projekt - FH TECHNIKUM WIEN</p>
-  </div>
-
+  <!-- head -->
+  <?php include 'head.php';?>
+  <!-- Body-->
+<body class="bg-light">
+  <div class="container">
+    <!-- header -->
+    <?php include 'header.php'; ?>
   <div class="row">
     <div class="col-md-4 mb-4">
-      <h4 class="d-flex justify-content-between align-items-center mb-3">
-        <span class="text-muted">Verpflichtende Felder</span>
-        <span class="badge badge-secondary badge-pill">4</span>
-      </h4>
-       <ul class="list-group mb-3">
-        <li class="list-group-item d-flex justify-content-between lh-condensed" style="background-color: #ddd">
-          <div>
-            <h6 class="my-0" onclick="location.href='index.html'">Standort & Datum </h6>
-          </div>
-        </li>
-        <li class="list-group-item d-flex justify-content-between lh-condensed">
-          <div>
-            <h6 class="my-0" onclick="location.href='fahrzeugA.html'">Fahrzeug A</h6>
-          </div>
-        </li>
-        <li class="list-group-item d-flex justify-content-between lh-condensed">
-          <div>
-            <h6 class="my-0" onclick="location.href='fahrzeugB.html'">Fahrzeug B</h6>
-          </div>
-        </li>
-      
-        <li class="list-group-item d-flex justify-content-between lh-condensed">
-          <div>
-            <h6 class="my-0" onclick="location.href='umstaende.html'">Umst&#228nde</h6>
-          </div>
-          
-        </li>
-       
-      
-      </ul>
-	
-	
-      <li class="list-group-item text-center">
-        <h5>Projekt Mitglieder</h5>
-       <a href="https://cis.technikum-wien.at/cis/public/bild.php?src=person&person_id=80544">Maral Mousawi</a><br/>
-        <a href="https://cis.technikum-wien.at/cis/public/bild.php?src=person&person_id=78774" >Ozan Aksakal</a><br/>
-         <a href="https://cis.technikum-wien.at/cis/public/bild.php?src=person&person_id=81827" >Burak Konca</a><br/>
-        <a href="https://cis.technikum-wien.at/cis/public/bild.php?src=person&person_id=75400"> Julian Bed&#246cs</a><br/>
-        
-      </li>
+      <!-- navbar -->
+      <?php
+      include 'navbar.php';
+      include 'team.php';
+      ?>
     </div>
-          
-     
-    <!-- Form Page Starts Here -->
 
-    <div class="col-md-8">
+    
+<div class="col-md-8">
       <h4 class="mb-3">FAHRZEUG B</h4>
-      <form action="umstaende.html">
-
-
+      <form action="umstaende.php" method="post">
         <h5 class="mt-4">Versicherungsnehmer/Versicherter (siehe Versicherungsbescheinigung)</h5>
         <div class="row">
           <div class="col-12 mb-4">
@@ -302,7 +236,7 @@
 
         <div class="row">
           <div class="col-6 text-left">
-        <input type="button" name="b1" value="Back"  onclick="location.href='fahrzeugA.html'">
+        <input type="button" name="b1" value="Back"  onclick="location.href='fahrzeugA.php'">
 
           </div>
           <div class="col-6 text-right">
@@ -315,21 +249,12 @@
 
       </form>
     </div>
-  </div>
 
-  <footer class="my-5 pt-5 text-muted text-center text-small">
-    <p class="mb-1">&copy; Copyright © 2021 &#214AMTC. Alle Rechte vorbehalten.</p>
-        <p class="mb-1">&copy; Created by Ozan Aksakal.</p>
 
-    <ul class="list-inline">
-      <!-- <li class="list-inline-item"><a href="#">Privacy</a></li>
-      <li class="list-inline-item"><a href="#">Terms</a></li>
-      <li class="list-inline-item"><a href="#">Help</a></li> -->
-    </ul>
-  </footer>
-</div>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-      <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
-        <script src="form-validation.js"></script></body>
+
+
+    </div>
+  <!-- footer -->
+  <?php include 'footer.php';?>
+</body>
 </html>
-
