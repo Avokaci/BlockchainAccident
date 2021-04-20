@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <title>Europaeischer Unfallbericht</title>
-    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 </head>
 <body class="bg-light">
     <div class="container">
@@ -17,764 +19,817 @@
         <p class="lead">Blockchain Accident	Projekt - FH TECHNIKUM WIEN </p>
     </div>
      <div class="row">
-        
-      <!-- Form: Standort&Datum -->      
-                    <div id="StandortDatum" class="col-md-8">
-                        <h4 class="mb-3">Standort & Datum </h4>
-                        <form action="redirectA.php" method="post">      
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                            <label for="dateofaccident">Datum  des Unfalles</label>
-                            <input type="date" class="form-control" id="dateofaccident" name="dateofaccident" placeholder="" value="" required>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                            <label for="timeofaccident">Uhrzeit</label>
-                            <input type="time" class="form-control" id="timeofaccident" name="timeofaccident"placeholder="" value="" required>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-5 mb-3">
-                            <label for="country">Land</label>
-                            <select class="custom-select d-block w-100" id="country" name="country" required>
-                                <option value="">W&#228hlen...</option>
-                                <option>Belgien</option>
-                            <option>Bulgarien </option>
-                            <option>D&#228nemark</option>
-                            <option>Deutschland</option>
-                            <option>Estland</option>
-                            <option>Finnland</option>
-                            <option>Frankreich</option>
-                            <option>Griechenland</option>
-                            <option>Irland</option>
-                                <option>Italien</option>
-                            <option>Kroatien</option>
-                            <option>Lettland</option>
-                            <option>Litauen</option>
-                            <option>Luxemburg</option>
-                            <option>Malta</option>
-                            <option>Niederlande</option>
-                            <option>&#214sterreich</option>
-                                <option>Polen</option>
-                            <option>Rumaenien</option>
-                            <option>Schweden</option>
-                            <option>Slowakei</option>
-                            <option>Slowenien</option>
-                            <option>Spanien</option>
-                            <option>Tschechien</option>
-                            <option>Ungarn</option>
-                            <option>Zypern</option>
-                            </select>
-                            </div>
-                            <div class="col-md-2 mb-3">
-                                <label for="state">Verletzte?</label>
-                                <select class="custom-select d-block w-100" id="state" name="state" required>
-                                <option value="No">No</option>
-                                <option value="Yes">Yes</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                            <label for="email">Unfallort</label>
-                            <input type="text" class="form-control" id="email" name="email" placeholder="(Straße, Haus-Nr. bzw. Kilometerstein)" required>
-                            </div>
-                            <div class="col-md-2 mb-3">
-                            <label for="hw-classification">PLZ</label>
-                            <input type="text" id="plz" name="plz" class="form-control" placeholder="1170" value="" required>
-                            </div>                            
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                            <label for="node1">Zeugen (Name, Anschrift, Telefon; Insassen von A und B unterstreichen)</label>
-                        <textarea id="zeugen" name="zeugen" placeholder=" Zeugen..(Name, Anschrift, Telefon; Insassen von A und B unterstreichen)" rows = "5" cols = "79" name = "description" class="form-control"></textarea>
-                            </div>                   
-                            <div class="col-md-2 mb-3">
-                            <label>Andere Sachschäden als an den Fahrzeugen A u. B </label>                          
-                            <div class="input-group">
-                                <div class="btn-group btn-block" role="group">
-                                        <input id="toggle-on" name="toggle" type="radio" required>
-                                    <label for="toggle-on">Ja</label>
-                                    <input id="toggle-off" name="toggle" type="radio" required>
-                                        <label for="toggle-off">Nein</label>
+        <div id="accordion">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Standort & Datum
+                  </button>
+                </h5>
+              </div>
+          
+              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                     <!-- Form: Standort&Datum --> 
+                                <div id="StandortDatum" class="col-md-8">
+                                    <h4 class="mb-3">Standort & Datum </h4>
+                                    <form action="redirectA.php" method="post">      
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                        <label for="dateofaccident">Datum  des Unfalles</label>
+                                        <input type="date" class="form-control" id="dateofaccident" name="dateofaccident" placeholder="" value="" required>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                        <label for="timeofaccident">Uhrzeit</label>
+                                        <input type="time" class="form-control" id="timeofaccident" name="timeofaccident"placeholder="" value="" required>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-5 mb-3">
+                                        <label for="country">Land</label>
+                                        <select class="custom-select d-block w-100" id="country" name="country" required>
+                                            <option value="">W&#228hlen...</option>
+                                            <option>Belgien</option>
+                                        <option>Bulgarien </option>
+                                        <option>D&#228nemark</option>
+                                        <option>Deutschland</option>
+                                        <option>Estland</option>
+                                        <option>Finnland</option>
+                                        <option>Frankreich</option>
+                                        <option>Griechenland</option>
+                                        <option>Irland</option>
+                                            <option>Italien</option>
+                                        <option>Kroatien</option>
+                                        <option>Lettland</option>
+                                        <option>Litauen</option>
+                                        <option>Luxemburg</option>
+                                        <option>Malta</option>
+                                        <option>Niederlande</option>
+                                        <option>&#214sterreich</option>
+                                            <option>Polen</option>
+                                        <option>Rumaenien</option>
+                                        <option>Schweden</option>
+                                        <option>Slowakei</option>
+                                        <option>Slowenien</option>
+                                        <option>Spanien</option>
+                                        <option>Tschechien</option>
+                                        <option>Ungarn</option>
+                                        <option>Zypern</option>
+                                        </select>
+                                        </div>
+                                        <div class="col-md-2 mb-3">
+                                            <label for="state">Verletzte?</label>
+                                            <select class="custom-select d-block w-100" id="state" name="state" required>
+                                            <option value="No">No</option>
+                                            <option value="Yes">Yes</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                        <label for="email">Unfallort</label>
+                                        <input type="text" class="form-control" id="email" name="email" placeholder="(Straße, Haus-Nr. bzw. Kilometerstein)" required>
+                                        </div>
+                                        <div class="col-md-2 mb-3">
+                                        <label for="hw-classification">PLZ</label>
+                                        <input type="text" id="plz" name="plz" class="form-control" placeholder="1170" value="" required>
+                                        </div>                            
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                        <label for="node1">Zeugen (Name, Anschrift, Telefon; Insassen von A und B unterstreichen)</label>
+                                    <textarea id="zeugen" name="zeugen" placeholder=" Zeugen..(Name, Anschrift, Telefon; Insassen von A und B unterstreichen)" rows = "5" cols = "79" name = "description" class="form-control"></textarea>
+                                        </div>                   
+                                        <div class="col-md-2 mb-3">
+                                        <label>Andere Sachschäden als an den Fahrzeugen A u. B </label>                          
+                                        <div class="input-group">
+                                            <div class="btn-group btn-block" role="group">
+                                                    <input id="toggle-on" name="toggle" type="radio" required>
+                                                <label for="toggle-on">Ja</label>
+                                                <input id="toggle-off" name="toggle" type="radio" required>
+                                                    <label for="toggle-off">Nein</label>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>       
+                                    <hr class="mb-4">
+                                    <div class="row">
+                                        <div class="col-6 text-left">      
+                                        </div>
+                                        <div class="col-6 text-right">           
+                                        <input type="submit" name="submit" value="Next">
+                                        </div>
+                                    </div>
+                                    </form>
                                 </div>
-                            </div>
-                            </div>
-                        </div>       
-                        <hr class="mb-4">
-                        <div class="row">
-                            <div class="col-6 text-left">      
-                            </div>
-                            <div class="col-6 text-right">           
-                            <input type="submit" name="submit" value="Next">
-                            </div>
-                        </div>
-                        </form>
-                    </div>
-     <!-- Form: FahrzeugA -->      
-                <div id="FahrzeugA" class="col-md-8">
-                    <h4 class="mb-3">FAHRZEUG A</h4>
-                    <form action="redirectB.php" method="post">
-                    <h5 class="mt-4">Versicherungsnehmer/Versicherter (siehe Versicherungsbescheinigung)</h5>
-                    <div class="row">
-                        <div class="col-12 mb-4">
-                        <label>Name</label>
-                        <div class="input-group">
-                            <input type="text" name="versName" class="form-control" required>
-                        </div>
-                        </div>
-                            <div class="col-12 mb-4">
-                        <label>Vorname</label>
-                        <div class="input-group">
-                            <input type="text" name="versVname" class="form-control" required>
-                        </div>
-                        </div>
-                            <div class="col-12 mb-4">
-                        <label>Anschrift</label>
-                        <div class="input-group">
-                            <input type="text" name="versAddress" class="form-control" required>
-                        </div>
-                        </div>
-                            <div class="col-md-2 mb-3">
-                        <label for="hw-classification">PLZ</label>
-                        <input type="text" name="versPlz" class="form-control" placeholder="1170" value="" required>
-                        </div>
-                        <div class="col-md-5 mb-3">
-                        <label for="country">Land</label>
-                        <select class="custom-select d-block w-100" id="country" name="versCountry" required>
-                        <option value="">W&#228hlen...</option>
-                        <option>Belgien</option>
-                        <option>Bulgarien </option>
-                        <option>D&#228nemark</option>
-                        <option>Deutschland</option>
-                        <option>Estland</option>
-                        <option>Finnland</option>
-                        <option>Frankreich</option>
-                        <option>Griechenland</option>
-                        <option>Irland</option>
-                        <option>Italien</option>
-                        <option>Kroatien</option>
-                        <option>Lettland</option>
-                        <option>Litauen</option>
-                        <option>Luxemburg</option>
-                        <option>Malta</option>
-                        <option>Niederlande</option>
-                        <option>&#214sterreich</option>
-                        <option>Polen</option>
-                        <option>Rumaenien</option>
-                        <option>Schweden</option>
-                        <option>Slowakei</option>
-                        <option>Slowenien</option>
-                        <option>Spanien</option>
-                        <option>Tschechien</option>
-                        <option>Ungarn</option>
-                        <option>Zypern</option>
-                        </select>
-                        </div>
-                        <div class="col-md-2 mb-3">
-                            <label for="state">Besteht Berechtigung zum Vorsteuerabzug??</label>
-                            <select class="custom-select d-block w-100" id="state" name="versState" required>
-                            <option value="Yes">Ja</option>
-                            <option value="No">Nein</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 mb-4">
-                        <label>Telefon oder E-Mail</label>
-                        <div class="input-group">
-                            <input type="text" name="versTelOrEmail" class="form-control" required>
-                        </div>
-                        </div>
-                    </div>
-            <div class="row">
-                    <h4 class="mb-3">  <u>FAHRZEUG</u><br /> 
-                    </h4> 
-                        <div class="col-12 mb-4">
-                        <label>Marke,Typ</label>
-                        <div class="input-group">
-                            <input type="text" name="markeType" class="form-control" required>
-                        </div>
-                        </div>
-                            <div class="col-12 mb-4">
-                        <label>Amtl. Kennzeichen</label>
-                        <div class="input-group">
-                            <input type="text" name="kennzeichen" class="form-control" required>
-                        </div>
-                        </div>
-                    </div>           
-                    <div class="row">
-                        <h4 class="mb-3">  <u>Versicherer</u><br /> 
-                    </h4>
-                        <div class="col-12 mb-4">
-                        <label>Versicherer</label>
-                        <div class="input-group">
-                            <input type="text" name="versicherer" class="form-control" required>
-                        </div>
-                        </div>
-                            <div class="col-12 mb-4">
-                        <label>Vers.-Nr:</label>
-                        <div class="input-group">
-                            <input type="text" name="versNr" class="form-control" required>
-                        </div>
-                        </div>
-                            <div class="col-12 mb-4">
-                        <label>Agent</label>
-                        <div class="input-group">
-                            <input type="text" name="agent" class="form-control" required>
-                        </div>
-                        </div>
-                            <div class="col-12 mb-4">
-                        <label>Nr. der Grünen Karte:</label>
-                        <div class="input-group">
-                            <input type="text" name="greencardNr" class="form-control" required>
-                        </div>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                        <label for="dateofaccident">Versicherungsausweis oder Grüne Karte gültig bis</label>
-                        <input type="date" name="gueltigkeitsdatum" class="form-control" id="dateofaccident" placeholder="" value="" required>
-                        </div>               
-                    <div class="col-md-2 mb-3">
-                        <label>Besteht eine Vollkaskoversicherung? </label> 
-                        <div class="input-group">
-                            <div class="btn-group btn-block" role="group">
-                                    <input id="toggle-on" name="toggle" type="radio" required>
-                                <label for="toggle-on">Ja</label>
-                                <input id="toggle-off" name="toggle" type="radio" required>
-                                    <label for="toggle-off">Nein</label>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                        <div class="row">
-                        <h4 class="mb-3">  <u>Fahrer</u><br /><small>(siehe Führerscheindaten)</small><br /><br />
-                    </h4>
-                        <div class="col-12 mb-4">
-                        <label>Name</label>
-                        <div class="input-group">
-                            <input type="text" name="fahrerName" class="form-control" required>
-                        </div>
-                        </div>
-                            <div class="col-12 mb-4">
-                        <label>Vorname</label>
-                        <div class="input-group">
-                            <input type="text" name="fahrerVname" class="form-control" required>
-                        </div>
-                        </div>
-                            <div class="col-12 mb-4">
-                        <label>Adresse</label>
-                        <div class="input-group">
-                            <input type="text" name="fahrerAdresse" class="form-control" required>
-                        </div>
-                        </div>
-                            <div class="col-12 mb-4">
-                        <label>Führerschein-Nr:</label>
-                        <div class="input-group">
-                            <input type="text" name="fuehrerscheinNr" class="form-control" required>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                        <label for="dateofaccident">Klasse</label>
-                            <input type="text" name="klasse" class="form-control" required> 
-                        </div>
-                            <div class="col-md-6 mb-3">
-                        <label for="dateofaccident">ausgestellt durch</label>
-                            <input type="text" name="ausgestellt" class="form-control" required>
-                        </div>    
-                        </div>
-                        <div class="col-md-6 mb-3">
-                        <label for="dateofaccident"> gültig ab ((Für Omnibusse, Taxis usw.))</label>
-                        <input type="date" name="gueltigAb" class="form-control" id="dateofaccident" placeholder="" value="" required>
-                        </div>
-                            <div class="col-md-6 mb-3">
-                        <label for="dateofaccident">bis</label>
-                        <input type="date" name="bis" class="form-control" id="dateofaccident" placeholder="" value="" required>
-                        </div> 
-                        </div>
-                        <div class="row">
-                            <h4 class="mb-3">  <u>Foto des Unfalls</u><br /> </h4>
-                            <div class="col-md-12 mb-3">      
-                <p>Klicken Sie auf den Button "Datei auswählen", um eine Datei hochzuladen:</p>          
-                <input type ='file'/>           
-                </div>                      
                 </div>
-                    <div class="row">
-                    <h4 class="mb-3">  <u>Sichtbare Sch&#228den</u><br /> </h4>
-                        <div class="col-12 mb-4">
-                        <div class="input-group">
-            <textarea placeholder=" Bemerkungen" name="sichtbareSchaden"rows = "5" cols = "79" name = "description" class="form-control"></textarea>            </div>
-                        </div>         
-                    </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Fahrzeug A
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div class="card-body">
+                  <!-- Form: FahrzeugA -->      
+                            <div id="FahrzeugA" class="col-md-8">
+                                <h4 class="mb-3">FAHRZEUG A</h4>
+                                <form action="redirectB.php" method="post">
+                                <h5 class="mt-4">Versicherungsnehmer/Versicherter (siehe Versicherungsbescheinigung)</h5>
+                                <div class="row">
+                                    <div class="col-12 mb-4">
+                                    <label>Name</label>
+                                    <div class="input-group">
+                                        <input type="text" name="versName" class="form-control" required>
+                                    </div>
+                                    </div>
+                                        <div class="col-12 mb-4">
+                                    <label>Vorname</label>
+                                    <div class="input-group">
+                                        <input type="text" name="versVname" class="form-control" required>
+                                    </div>
+                                    </div>
+                                        <div class="col-12 mb-4">
+                                    <label>Anschrift</label>
+                                    <div class="input-group">
+                                        <input type="text" name="versAddress" class="form-control" required>
+                                    </div>
+                                    </div>
+                                        <div class="col-md-2 mb-3">
+                                    <label for="hw-classification">PLZ</label>
+                                    <input type="text" name="versPlz" class="form-control" placeholder="1170" value="" required>
+                                    </div>
+                                    <div class="col-md-5 mb-3">
+                                    <label for="country">Land</label>
+                                    <select class="custom-select d-block w-100" id="country" name="versCountry" required>
+                                    <option value="">W&#228hlen...</option>
+                                    <option>Belgien</option>
+                                    <option>Bulgarien </option>
+                                    <option>D&#228nemark</option>
+                                    <option>Deutschland</option>
+                                    <option>Estland</option>
+                                    <option>Finnland</option>
+                                    <option>Frankreich</option>
+                                    <option>Griechenland</option>
+                                    <option>Irland</option>
+                                    <option>Italien</option>
+                                    <option>Kroatien</option>
+                                    <option>Lettland</option>
+                                    <option>Litauen</option>
+                                    <option>Luxemburg</option>
+                                    <option>Malta</option>
+                                    <option>Niederlande</option>
+                                    <option>&#214sterreich</option>
+                                    <option>Polen</option>
+                                    <option>Rumaenien</option>
+                                    <option>Schweden</option>
+                                    <option>Slowakei</option>
+                                    <option>Slowenien</option>
+                                    <option>Spanien</option>
+                                    <option>Tschechien</option>
+                                    <option>Ungarn</option>
+                                    <option>Zypern</option>
+                                    </select>
+                                    </div>
+                                    <div class="col-md-2 mb-3">
+                                        <label for="state">Besteht Berechtigung zum Vorsteuerabzug??</label>
+                                        <select class="custom-select d-block w-100" id="state" name="versState" required>
+                                        <option value="Yes">Ja</option>
+                                        <option value="No">Nein</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 mb-4">
+                                    <label>Telefon oder E-Mail</label>
+                                    <div class="input-group">
+                                        <input type="text" name="versTelOrEmail" class="form-control" required>
+                                    </div>
+                                    </div>
+                                </div>
                         <div class="row">
-                    <h4 class="mb-3">  <u>Bemerkungen</u><br /> </h4>
-                        <div class="col-12 mb-4">
-                        <div class="input-group">
-                    <textarea placeholder=" Bemerkungen" name="bemerkungen" rows = "5" cols = "79" name = "description" class="form-control"></textarea>
-                        </div>
-                        </div>                       
-                    </div>      
-                    <hr class="mb-4">          
-                    <div class="row">
-                        <div class="col-6 text-left">
-                                    <input type="button" name="b1" value="Back"  onclick="location.href='index.php'">
-                        </div>
-                        <div class="col-6 text-right">       
-                        <input type="submit" name="submit" value="Next">
-                        </div>
-                    </div>
-                    </form>
-                </div>
-
-     <!-- Form: FahrzeugB -->      
-                <div id="FahrzeugB" class="col-md-8">
-                    <h4 class="mb-3">FAHRZEUG B</h4>
-                    <form action="redirectUmstaende.php" method="post">
-                    <h5 class="mt-4">Versicherungsnehmer/Versicherter (siehe Versicherungsbescheinigung)</h5>
-                    <div class="row">
-                        <div class="col-12 mb-4">
-                        <label>Name</label>
-                        <div class="input-group">
-                            <input type="text" name="versName" class="form-control" required>
-                        </div>
-                        </div>
-                            <div class="col-12 mb-4">
-                        <label>Vorname</label>
-                        <div class="input-group">
-                            <input type="text" name="versVname" class="form-control" required>
-                        </div>
-                        </div>
-                            <div class="col-12 mb-4">
-                        <label>Anschrift</label>
-                        <div class="input-group">
-                            <input type="text" name="versAddress" class="form-control" required>
-                        </div>
-                        </div>
-                            <div class="col-md-2 mb-3">
-                        <label for="hw-classification">PLZ</label>
-                        <input type="text" name="versPlz" class="form-control" placeholder="1170" value="" required>
-                        </div>
-                        <div class="col-md-5 mb-3">
-                        <label for="country">Land</label>
-                        <select class="custom-select d-block w-100" id="country" name="versCountry" required>
-                        <option value="">W&#228hlen...</option>
-                        <option>Belgien</option>
-                        <option>Bulgarien </option>
-                        <option>D&#228nemark</option>
-                        <option>Deutschland</option>
-                        <option>Estland</option>
-                        <option>Finnland</option>
-                        <option>Frankreich</option>
-                        <option>Griechenland</option>
-                        <option>Irland</option>
-                        <option>Italien</option>
-                        <option>Kroatien</option>
-                        <option>Lettland</option>
-                        <option>Litauen</option>
-                        <option>Luxemburg</option>
-                        <option>Malta</option>
-                        <option>Niederlande</option>
-                        <option>&#214sterreich</option>
-                        <option>Polen</option>
-                        <option>Rumaenien</option>
-                        <option>Schweden</option>
-                        <option>Slowakei</option>
-                        <option>Slowenien</option>
-                        <option>Spanien</option>
-                        <option>Tschechien</option>
-                        <option>Ungarn</option>
-                        <option>Zypern</option>
-                        </select>
-                        </div>
-                        <div class="col-md-2 mb-3">
-                            <label for="state">Besteht Berechtigung zum Vorsteuerabzug??</label>
-                            <select class="custom-select d-block w-100" id="state" name="versState" required>
-                            <option value="Yes">Ja</option>
-                            <option value="No">Nein</option>
-                            </select>
-                        </div>
-                    </div>           
-                    <div class="row">
-                        <div class="col-12 mb-4">
-                        <label>Telefon oder E-Mail</label>
-                        <div class="input-group">
-                            <input type="text" name="versTelOrEmail" class="form-control" required>
-                        </div>
-                        </div>
-                    </div>
-            <div class="row">
-                    <h4 class="mb-3">  <u>FAHRZEUG</u><br /> 
-                    </h4>                   
-                        <div class="col-12 mb-4">
-                        <label>Marke,Typ</label>
-                        <div class="input-group">
-                            <input type="text" name="markeType" class="form-control" required>
-                        </div>
-                        </div>
-                            <div class="col-12 mb-4">
-                        <label>Amtl. Kennzeichen</label>
-                        <div class="input-group">
-                            <input type="text" name="kennzeichen" class="form-control" required>
-                        </div>
-                        </div>
-                    </div>           
-                    <div class="row">
-                        <h4 class="mb-3">  <u>Versicherer</u><br /> 
-                    </h4>
-                        <div class="col-12 mb-4">
-                        <label>Versicherer</label>
-                        <div class="input-group">
-                            <input type="text" name="versicherer" class="form-control" required>
-                        </div>
-                        </div>
-                            <div class="col-12 mb-4">
-                        <label>Vers.-Nr:</label>
-                        <div class="input-group">
-                            <input type="text" name="versNr" class="form-control" required>
-                        </div>
-                        </div>
-                            <div class="col-12 mb-4">
-                        <label>Agent</label>
-                        <div class="input-group">
-                            <input type="text" name="agent" class="form-control" required>
-                        </div>
-                        </div>
-                            <div class="col-12 mb-4">
-                        <label>Nr. der Grünen Karte:</label>
-                        <div class="input-group">
-                            <input type="text" name="greencardNr" class="form-control" required>
-                        </div>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                        <label for="dateofaccident">Versicherungsausweis oder Grüne Karte gültig bis</label>
-                        <input type="date" name="gueltigkeitsdatum" class="form-control" id="dateofaccident" placeholder="" value="" required>
-                        </div>                
-                    <div class="col-md-2 mb-3">
-                        <label>Besteht eine Vollkaskoversicherung? </label> 
-                        <div class="input-group">
-                            <div class="btn-group btn-block" role="group">
-                                    <input id="toggle-on" name="toggle" type="radio" required>
-                                <label for="toggle-on">Ja</label>
-                                <input id="toggle-off" name="toggle" type="radio" required>
-                                    <label for="toggle-off">Nein</label>
+                                <h4 class="mb-3">  <u>FAHRZEUG</u><br /> 
+                                </h4> 
+                                    <div class="col-12 mb-4">
+                                    <label>Marke,Typ</label>
+                                    <div class="input-group">
+                                        <input type="text" name="markeType" class="form-control" required>
+                                    </div>
+                                    </div>
+                                        <div class="col-12 mb-4">
+                                    <label>Amtl. Kennzeichen</label>
+                                    <div class="input-group">
+                                        <input type="text" name="kennzeichen" class="form-control" required>
+                                    </div>
+                                    </div>
+                                </div>           
+                                <div class="row">
+                                    <h4 class="mb-3">  <u>Versicherer</u><br /> 
+                                </h4>
+                                    <div class="col-12 mb-4">
+                                    <label>Versicherer</label>
+                                    <div class="input-group">
+                                        <input type="text" name="versicherer" class="form-control" required>
+                                    </div>
+                                    </div>
+                                        <div class="col-12 mb-4">
+                                    <label>Vers.-Nr:</label>
+                                    <div class="input-group">
+                                        <input type="text" name="versNr" class="form-control" required>
+                                    </div>
+                                    </div>
+                                        <div class="col-12 mb-4">
+                                    <label>Agent</label>
+                                    <div class="input-group">
+                                        <input type="text" name="agent" class="form-control" required>
+                                    </div>
+                                    </div>
+                                        <div class="col-12 mb-4">
+                                    <label>Nr. der Grünen Karte:</label>
+                                    <div class="input-group">
+                                        <input type="text" name="greencardNr" class="form-control" required>
+                                    </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                    <label for="dateofaccident">Versicherungsausweis oder Grüne Karte gültig bis</label>
+                                    <input type="date" name="gueltigkeitsdatum" class="form-control" id="dateofaccident" placeholder="" value="" required>
+                                    </div>               
+                                <div class="col-md-2 mb-3">
+                                    <label>Besteht eine Vollkaskoversicherung? </label> 
+                                    <div class="input-group">
+                                        <div class="btn-group btn-block" role="group">
+                                                <input id="toggle-on" name="toggle" type="radio" required>
+                                            <label for="toggle-on">Ja</label>
+                                            <input id="toggle-off" name="toggle" type="radio" required>
+                                                <label for="toggle-off">Nein</label>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                                    <div class="row">
+                                    <h4 class="mb-3">  <u>Fahrer</u><br /><small>(siehe Führerscheindaten)</small><br /><br />
+                                </h4>
+                                    <div class="col-12 mb-4">
+                                    <label>Name</label>
+                                    <div class="input-group">
+                                        <input type="text" name="fahrerName" class="form-control" required>
+                                    </div>
+                                    </div>
+                                        <div class="col-12 mb-4">
+                                    <label>Vorname</label>
+                                    <div class="input-group">
+                                        <input type="text" name="fahrerVname" class="form-control" required>
+                                    </div>
+                                    </div>
+                                        <div class="col-12 mb-4">
+                                    <label>Adresse</label>
+                                    <div class="input-group">
+                                        <input type="text" name="fahrerAdresse" class="form-control" required>
+                                    </div>
+                                    </div>
+                                        <div class="col-12 mb-4">
+                                    <label>Führerschein-Nr:</label>
+                                    <div class="input-group">
+                                        <input type="text" name="fuehrerscheinNr" class="form-control" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                    <label for="dateofaccident">Klasse</label>
+                                        <input type="text" name="klasse" class="form-control" required> 
+                                    </div>
+                                        <div class="col-md-6 mb-3">
+                                    <label for="dateofaccident">ausgestellt durch</label>
+                                        <input type="text" name="ausgestellt" class="form-control" required>
+                                    </div>    
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                    <label for="dateofaccident"> gültig ab ((Für Omnibusse, Taxis usw.))</label>
+                                    <input type="date" name="gueltigAb" class="form-control" id="dateofaccident" placeholder="" value="" required>
+                                    </div>
+                                        <div class="col-md-6 mb-3">
+                                    <label for="dateofaccident">bis</label>
+                                    <input type="date" name="bis" class="form-control" id="dateofaccident" placeholder="" value="" required>
+                                    </div> 
+                                    </div>
+                                    <div class="row">
+                                        <h4 class="mb-3">  <u>Foto des Unfalls</u><br /> </h4>
+                                        <div class="col-md-12 mb-3">      
+                            <p>Klicken Sie auf den Button "Datei auswählen", um eine Datei hochzuladen:</p>          
+                            <input type ='file'/>           
+                            </div>                      
                             </div>
-                        </div>
-                        </div>
-                    </div>            
+                                <div class="row">
+                                <h4 class="mb-3">  <u>Sichtbare Sch&#228den</u><br /> </h4>
+                                    <div class="col-12 mb-4">
+                                    <div class="input-group">
+                        <textarea placeholder=" Bemerkungen" name="sichtbareSchaden"rows = "5" cols = "79" name = "description" class="form-control"></textarea>            </div>
+                                    </div>         
+                                </div>
+                                    <div class="row">
+                                <h4 class="mb-3">  <u>Bemerkungen</u><br /> </h4>
+                                    <div class="col-12 mb-4">
+                                    <div class="input-group">
+                                <textarea placeholder=" Bemerkungen" name="bemerkungen" rows = "5" cols = "79" name = "description" class="form-control"></textarea>
+                                    </div>
+                                    </div>                       
+                                </div>      
+                                <hr class="mb-4">          
+                                <div class="row">
+                                    <div class="col-6 text-left">
+                                                <input type="button" name="b1" value="Back"  onclick="location.href='index.php'">
+                                    </div>
+                                    <div class="col-6 text-right">       
+                                    <input type="submit" name="submit" value="Next">
+                                    </div>
+                                </div>
+                                </form>
+                            </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingThree">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Fahrzeug B
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                <div class="card-body">
+                  <!-- Form: FahrzeugB -->      
+                            <div id="FahrzeugB" class="col-md-8">
+                                <h4 class="mb-3">FAHRZEUG B</h4>
+                                <form action="redirectUmstaende.php" method="post">
+                                <h5 class="mt-4">Versicherungsnehmer/Versicherter (siehe Versicherungsbescheinigung)</h5>
+                                <div class="row">
+                                    <div class="col-12 mb-4">
+                                    <label>Name</label>
+                                    <div class="input-group">
+                                        <input type="text" name="versName" class="form-control" required>
+                                    </div>
+                                    </div>
+                                        <div class="col-12 mb-4">
+                                    <label>Vorname</label>
+                                    <div class="input-group">
+                                        <input type="text" name="versVname" class="form-control" required>
+                                    </div>
+                                    </div>
+                                        <div class="col-12 mb-4">
+                                    <label>Anschrift</label>
+                                    <div class="input-group">
+                                        <input type="text" name="versAddress" class="form-control" required>
+                                    </div>
+                                    </div>
+                                        <div class="col-md-2 mb-3">
+                                    <label for="hw-classification">PLZ</label>
+                                    <input type="text" name="versPlz" class="form-control" placeholder="1170" value="" required>
+                                    </div>
+                                    <div class="col-md-5 mb-3">
+                                    <label for="country">Land</label>
+                                    <select class="custom-select d-block w-100" id="country" name="versCountry" required>
+                                    <option value="">W&#228hlen...</option>
+                                    <option>Belgien</option>
+                                    <option>Bulgarien </option>
+                                    <option>D&#228nemark</option>
+                                    <option>Deutschland</option>
+                                    <option>Estland</option>
+                                    <option>Finnland</option>
+                                    <option>Frankreich</option>
+                                    <option>Griechenland</option>
+                                    <option>Irland</option>
+                                    <option>Italien</option>
+                                    <option>Kroatien</option>
+                                    <option>Lettland</option>
+                                    <option>Litauen</option>
+                                    <option>Luxemburg</option>
+                                    <option>Malta</option>
+                                    <option>Niederlande</option>
+                                    <option>&#214sterreich</option>
+                                    <option>Polen</option>
+                                    <option>Rumaenien</option>
+                                    <option>Schweden</option>
+                                    <option>Slowakei</option>
+                                    <option>Slowenien</option>
+                                    <option>Spanien</option>
+                                    <option>Tschechien</option>
+                                    <option>Ungarn</option>
+                                    <option>Zypern</option>
+                                    </select>
+                                    </div>
+                                    <div class="col-md-2 mb-3">
+                                        <label for="state">Besteht Berechtigung zum Vorsteuerabzug??</label>
+                                        <select class="custom-select d-block w-100" id="state" name="versState" required>
+                                        <option value="Yes">Ja</option>
+                                        <option value="No">Nein</option>
+                                        </select>
+                                    </div>
+                                </div>           
+                                <div class="row">
+                                    <div class="col-12 mb-4">
+                                    <label>Telefon oder E-Mail</label>
+                                    <div class="input-group">
+                                        <input type="text" name="versTelOrEmail" class="form-control" required>
+                                    </div>
+                                    </div>
+                                </div>
                         <div class="row">
-                        <h4 class="mb-3">  <u>Fahrer</u><br /><small>(siehe Führerscheindaten)</small><br /><br />                                  
-                    </h4>
-                        <div class="col-12 mb-4">
-                        <label>Name</label>
-                        <div class="input-group">
-                            <input type="text" name="fahrerName" class="form-control" required>
-                        </div>
-                        </div>
-                            <div class="col-12 mb-4">
-                        <label>Vorname</label>
-                        <div class="input-group">
-                            <input type="text" name="fahrerVname" class="form-control" required>
-                        </div>
-                        </div>
-                            <div class="col-12 mb-4">
-                        <label>Adresse</label>
-                        <div class="input-group">
-                            <input type="text" name="fahrerAdresse" class="form-control" required>
-                        </div>
-                        </div>
-                            <div class="col-12 mb-4">
-                        <label>Führerschein-Nr:</label>
-                        <div class="input-group">
-                            <input type="text" name="fuehrerscheinNr" class="form-control" required>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                        <label for="dateofaccident">Klasse</label>
-                            <input type="text" name="klasse" class="form-control" required> 
-                        </div>
-                            <div class="col-md-6 mb-3">
-                        <label for="dateofaccident">ausgestellt durch</label>
-                            <input type="text" name="ausgestellt" class="form-control" required>
-                        </div>                       
-                        </div>
-                        <div class="col-md-6 mb-3">
-                        <label for="dateofaccident"> gültig ab ((Für Omnibusse, Taxis usw.))</label>
-                        <input type="date" name="gueltigAb" class="form-control" id="dateofaccident" placeholder="" value="" required>
-                        </div>
-                            <div class="col-md-6 mb-3">
-                        <label for="dateofaccident">bis</label>
-                        <input type="date" name="bis" class="form-control" id="dateofaccident" placeholder="" value="" required>
-                        </div> 
-                     </div>
-                        <div class="row">
-                            <h4 class="mb-3">  <u>Foto des Unfalls</u><br /> </h4>
-                            <div class="col-md-12 mb-3">                        
-                <p>Klicken Sie auf den Button "Datei auswählen", um eine Datei hochzuladen:</p>
-                <input type ='file'/>           
-                </div>                        
+                                <h4 class="mb-3">  <u>FAHRZEUG</u><br /> 
+                                </h4>                   
+                                    <div class="col-12 mb-4">
+                                    <label>Marke,Typ</label>
+                                    <div class="input-group">
+                                        <input type="text" name="markeType" class="form-control" required>
+                                    </div>
+                                    </div>
+                                        <div class="col-12 mb-4">
+                                    <label>Amtl. Kennzeichen</label>
+                                    <div class="input-group">
+                                        <input type="text" name="kennzeichen" class="form-control" required>
+                                    </div>
+                                    </div>
+                                </div>           
+                                <div class="row">
+                                    <h4 class="mb-3">  <u>Versicherer</u><br /> 
+                                </h4>
+                                    <div class="col-12 mb-4">
+                                    <label>Versicherer</label>
+                                    <div class="input-group">
+                                        <input type="text" name="versicherer" class="form-control" required>
+                                    </div>
+                                    </div>
+                                        <div class="col-12 mb-4">
+                                    <label>Vers.-Nr:</label>
+                                    <div class="input-group">
+                                        <input type="text" name="versNr" class="form-control" required>
+                                    </div>
+                                    </div>
+                                        <div class="col-12 mb-4">
+                                    <label>Agent</label>
+                                    <div class="input-group">
+                                        <input type="text" name="agent" class="form-control" required>
+                                    </div>
+                                    </div>
+                                        <div class="col-12 mb-4">
+                                    <label>Nr. der Grünen Karte:</label>
+                                    <div class="input-group">
+                                        <input type="text" name="greencardNr" class="form-control" required>
+                                    </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                    <label for="dateofaccident">Versicherungsausweis oder Grüne Karte gültig bis</label>
+                                    <input type="date" name="gueltigkeitsdatum" class="form-control" id="dateofaccident" placeholder="" value="" required>
+                                    </div>                
+                                <div class="col-md-2 mb-3">
+                                    <label>Besteht eine Vollkaskoversicherung? </label> 
+                                    <div class="input-group">
+                                        <div class="btn-group btn-block" role="group">
+                                                <input id="toggle-on" name="toggle" type="radio" required>
+                                            <label for="toggle-on">Ja</label>
+                                            <input id="toggle-off" name="toggle" type="radio" required>
+                                                <label for="toggle-off">Nein</label>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>            
+                                    <div class="row">
+                                    <h4 class="mb-3">  <u>Fahrer</u><br /><small>(siehe Führerscheindaten)</small><br /><br />                                  
+                                </h4>
+                                    <div class="col-12 mb-4">
+                                    <label>Name</label>
+                                    <div class="input-group">
+                                        <input type="text" name="fahrerName" class="form-control" required>
+                                    </div>
+                                    </div>
+                                        <div class="col-12 mb-4">
+                                    <label>Vorname</label>
+                                    <div class="input-group">
+                                        <input type="text" name="fahrerVname" class="form-control" required>
+                                    </div>
+                                    </div>
+                                        <div class="col-12 mb-4">
+                                    <label>Adresse</label>
+                                    <div class="input-group">
+                                        <input type="text" name="fahrerAdresse" class="form-control" required>
+                                    </div>
+                                    </div>
+                                        <div class="col-12 mb-4">
+                                    <label>Führerschein-Nr:</label>
+                                    <div class="input-group">
+                                        <input type="text" name="fuehrerscheinNr" class="form-control" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                    <label for="dateofaccident">Klasse</label>
+                                        <input type="text" name="klasse" class="form-control" required> 
+                                    </div>
+                                        <div class="col-md-6 mb-3">
+                                    <label for="dateofaccident">ausgestellt durch</label>
+                                        <input type="text" name="ausgestellt" class="form-control" required>
+                                    </div>                       
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                    <label for="dateofaccident"> gültig ab ((Für Omnibusse, Taxis usw.))</label>
+                                    <input type="date" name="gueltigAb" class="form-control" id="dateofaccident" placeholder="" value="" required>
+                                    </div>
+                                        <div class="col-md-6 mb-3">
+                                    <label for="dateofaccident">bis</label>
+                                    <input type="date" name="bis" class="form-control" id="dateofaccident" placeholder="" value="" required>
+                                    </div> 
+                                </div>
+                                    <div class="row">
+                                        <h4 class="mb-3">  <u>Foto des Unfalls</u><br /> </h4>
+                                        <div class="col-md-12 mb-3">                        
+                            <p>Klicken Sie auf den Button "Datei auswählen", um eine Datei hochzuladen:</p>
+                            <input type ='file'/>           
+                            </div>                        
+                            </div>
+                                <div class="row">
+                                <h4 class="mb-3">  <u>Sichtbare Sch&#228den</u><br /> </h4>
+                                    <div class="col-12 mb-4">
+                                    <div class="input-group">
+                        <textarea placeholder=" Bemerkungen" name="sichtbareSchaden"rows = "5" cols = "79" name = "description" class="form-control"></textarea>            </div>
+                                    </div>
+                                </div>
+                                    <div class="row">
+                                <h4 class="mb-3">  <u>Bemerkungen</u><br /> </h4>
+                                    <div class="col-12 mb-4">
+                                    <div class="input-group">
+                                <textarea placeholder=" Bemerkungen" name="bemerkungen" rows = "5" cols = "79" name = "description" class="form-control"></textarea>
+                                    </div>
+                                    </div> 
+                                </div>      
+                                <hr class="mb-4">           
+                                <div class="row">
+                                    <div class="col-6 text-left">
+                                                <input type="button" name="b1" value="Back"  onclick="location.href='index.php'">
+                                    </div>
+                                    <div class="col-6 text-right">
+                                    <input type="submit" name="submit" value="Next">
+                                    </div>
+                                </div>
+                                </form>
+                            </div>
                 </div>
-                    <div class="row">
-                    <h4 class="mb-3">  <u>Sichtbare Sch&#228den</u><br /> </h4>
-                        <div class="col-12 mb-4">
-                        <div class="input-group">
-            <textarea placeholder=" Bemerkungen" name="sichtbareSchaden"rows = "5" cols = "79" name = "description" class="form-control"></textarea>            </div>
-                        </div>
-                    </div>
-                        <div class="row">
-                    <h4 class="mb-3">  <u>Bemerkungen</u><br /> </h4>
-                        <div class="col-12 mb-4">
-                        <div class="input-group">
-                    <textarea placeholder=" Bemerkungen" name="bemerkungen" rows = "5" cols = "79" name = "description" class="form-control"></textarea>
-                        </div>
-                        </div> 
-                    </div>      
-                    <hr class="mb-4">           
-                    <div class="row">
-                        <div class="col-6 text-left">
-                                    <input type="button" name="b1" value="Back"  onclick="location.href='index.php'">
-                        </div>
-                        <div class="col-6 text-right">
-                        <input type="submit" name="submit" value="Next">
-                        </div>
-                    </div>
-                    </form>
+              </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingFour">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                      Umstände
+                    </button>
+                  </h5>
                 </div>
-    <!-- Form: Umstände -->      
-                <div id="Umstaende" class="col-md-8">
-                    <h4 class="mb-3"> Umstände
-                    <form action="umstaende.php" method="post">
-                    <b></b><br />
-                        <small>Bitte ankreuzen, soweit für die Beschreibung der Skizze sachdienlich </small><br /><br />
-                    </h4>
-                    <div class="row text-center">
-                    <div class="input-group">
-                        <label class="mx-auto">Fahrzeug parkte (auf der Straße) </label>
-                        <div class="btn-group btn-block" role="group">
-                            <div class ="col-sm">
-                            <label for="toggle-on1">Fahrzeug A</label>
-                            <input id="toggle-on1" name="toggle" type="checkbox">
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                  <div class="card-body">
+                    <!-- Form: Umstände -->      
+                            <div id="Umstaende" class="col-md-8">
+                                <h4 class="mb-3"> Umstände
+                                <form action="umstaende.php" method="post">
+                                <b></b><br />
+                                    <small>Bitte ankreuzen, soweit für die Beschreibung der Skizze sachdienlich </small><br /><br />
+                                </h4>
+                                <div class="row text-center">
+                                <div class="input-group">
+                                    <label class="mx-auto">Fahrzeug parkte (auf der Straße) </label>
+                                    <div class="btn-group btn-block" role="group">
+                                        <div class ="col-sm">
+                                        <label for="toggle-on1">Fahrzeug A</label>
+                                        <input id="toggle-on1" name="toggle" type="checkbox">
+                                        </div>
+                                        <div class ="col-sm">
+                                        <label for="toggle-off2">Fahrzeug B</label>
+                                        <input id="toggle-off2" name="toggle" type="checkbox">
+                                        </div>             
+                                    </div>
+                                </div>
+                                <div class="input-group">
+                                    <label class="mx-auto">fuhr aus der Parkstelle heraus </label>
+                                    <div class="btn-group btn-block" role="group">
+                                    <div class ="col-sm">
+                                    <label for="toggle-on3">Fahrzeug A</label>
+                                    <input id="toggle-on3" name="toggle" type="checkbox">
+                                    </div>
+                                    <div class ="col-sm">
+                                    <label for="toggle-off3">Fahrzeug B</label>
+                                    <input id="toggle-off3" name="toggle" type="checkbox">
+                                    </div>             
+                                    </div>
+                                <div class="input-group">
+                                    <label class="mx-auto">fuhr in eine Parkstelle hinein </label>
+                                    <div class="btn-group btn-block" role="group">
+                                    <div class ="col-sm">
+                                        <label for="toggle-on4">Fahrzeug A</label>
+                                        <input id="toggle-on4" name="toggle" type="checkbox">
+                                    </div>
+                                    <div class ="col-sm">
+                                        <label for="toggle-off4">Fahrzeug B</label>
+                                        <input id="toggle-off4" name="toggle" type="checkbox">
+                                    </div>             
+                                    </div>
+                                </div> 
+                                    <div class="input-group">
+                                        <label class="mx-auto">fuhr aus einem Parkplatz, aus einem Grundstück oder einem Feldweg/Privatweg heraus </label>
+                                        <div class="btn-group btn-block" role="group">
+                                        <div class ="col-sm">
+                                        <label for="toggle-on5">Fahrzeug A</label>
+                                        <input id="toggle-on5" name="toggle" type="checkbox">
+                                        </div>
+                                        <div class ="col-sm">
+                                        <label for="toggle-off5">Fahrzeug B</label>
+                                        <input id="toggle-off5" name="toggle" type="checkbox">
+                                        </div>             
+                                        </div>
+                                    </div>
+                                        <div class="input-group">
+                                        <label class="mx-auto">fuhr auf einen Parkplatz, bog in ein Grundstück oder einen Feldweg/Privatweg ein </label>
+                                        <div class="btn-group btn-block" role="group">
+                                        <div class ="col-sm">
+                                            <label for="toggle-on6">Fahrzeug A</label>
+                                            <input id="toggle-on6" name="toggle" type="checkbox">
+                                        </div>
+                                        <div class ="col-sm">
+                                            <label for="toggle-off6">Fahrzeug B</label>
+                                            <input id="toggle-off6" name="toggle" type="checkbox">
+                                        </div>             
+                                        </div>
+                                    </div>
+                                        <div class="input-group">
+                                        <label class="mx-auto">bog in einen Kreisverkehr ein</label>
+                                        <div class="btn-group btn-block" role="group">
+                                        <div class ="col-sm">
+                                            <label for="toggle-on7">Fahrzeug A</label>
+                                            <input id="toggle-on7" name="toggle" type="checkbox">
+                                        </div>
+                                        <div class ="col-sm">
+                                            <label for="toggle-off7">Fahrzeug B</label>
+                                            <input id="toggle-off7" name="toggle" type="checkbox">
+                                        </div>             
+                                        </div>
+                                    </div>
+                                        <div class="input-group">
+                                        <label class="mx-auto">fuhr im Kreisverkehr </label>
+                                        <div class="btn-group btn-block" role="group">
+                                        <div class ="col-sm">
+                                            <label for="toggle-on8">Fahrzeug A</label>
+                                            <input id="toggle-on8" name="toggle" type="checkbox">
+                                        </div>
+                                        <div class ="col-sm">
+                                            <label for="toggle-off8">Fahrzeug B</label>
+                                            <input id="toggle-off8" name="toggle" type="checkbox">
+                                        </div>             
+                                        </div>
+                                    </div>
+                                        <div class="input-group">
+                                        <label class="mx-auto">fuhr heckseitig auf ein anderes Fahrzeug auf bei Fahrt in dieselbe Richtung und auf derselben Fahrspur </label>
+                                        <div class="btn-group btn-block" role="group">
+                                        <div class ="col-sm">
+                                            <label for="toggle-on9">Fahrzeug A</label>
+                                            <input id="toggle-on9" name="toggle" type="checkbox">
+                                        </div>
+                                        <div class ="col-sm">
+                                            <label for="toggle-off9">Fahrzeug B</label>
+                                            <input id="toggle-off9" name="toggle" type="checkbox">
+                                        </div>             
+                                        </div>
+                                    </div>
+                                        <div class="input-group">
+                                        <label class="mx-auto">fuhr in gleicher Richtung, aber in einer anderer Spur </label>
+                                        <div class="btn-group btn-block" role="group">
+                                        <div class ="col-sm">
+                                            <label for="toggle-on10">Fahrzeug A</label>
+                                            <input id="toggle-on10" name="toggle" type="checkbox">
+                                        </div>
+                                        <div class ="col-sm">
+                                            <label for="toggle-off10">Fahrzeug B</label>
+                                            <input id="toggle-off10" name="toggle" type="checkbox">
+                                        </div>             
+                                        </div>
+                                    </div>
+                                        <div class="input-group">
+                                        <label class="mx-auto">wechselte die Spur </label>
+                                        <div class="btn-group btn-block" role="group">
+                                        <div class ="col-sm">
+                                            <label for="toggle-on11">Fahrzeug A</label>
+                                            <input id="toggle-on11" name="toggle" type="checkbox">
+                                        </div>
+                                        <div class ="col-sm">
+                                            <label for="toggle-off11">Fahrzeug B</label>
+                                            <input id="toggle-off11" name="toggle" type="checkbox">
+                                        </div>             
+                                        </div>
+                                    </div>
+                                        <div class="input-group">
+                                        <label class="mx-auto">überholte </label>
+                                        <div class="btn-group btn-block" role="group">
+                                        <div class ="col-sm">
+                                            <label for="toggle-on12">Fahrzeug A</label>
+                                            <input id="toggle-on12" name="toggle" type="checkbox">
+                                        </div>
+                                        <div class ="col-sm">
+                                            <label for="toggle-off12">Fahrzeug B</label>
+                                            <input id="toggle-off12" name="toggle" type="checkbox">
+                                        </div>             
+                                        </div>
+                                    </div>
+                                        <div class="input-group">
+                                        <label class="mx-auto">bog rechts ab </label>
+                                        <div class="btn-group btn-block" role="group">
+                                        <div class ="col-sm">
+                                            <label for="toggle-on13">Fahrzeug A</label>
+                                            <input id="toggle-on13" name="toggle" type="checkbox">
+                                        </div>
+                                        <div class ="col-sm">
+                                            <label for="toggle-off13">Fahrzeug B</label>
+                                            <input id="toggle-off13" name="toggle" type="checkbox">
+                                        </div>             
+                                        </div>
+                                    </div>
+                                        <div class="input-group">
+                                        <label class="mx-auto">bog links ab </label>
+                                        <div class="btn-group btn-block" role="group">
+                                        <div class ="col-sm">
+                                            <label for="toggle-on14">Fahrzeug A</label>
+                                            <input id="toggle-on14" name="toggle" type="checkbox">
+                                        </div>
+                                        <div class ="col-sm">
+                                            <label for="toggle-off14">Fahrzeug B</label>
+                                            <input id="toggle-off14" name="toggle" type="checkbox">
+                                        </div>             
+                                        </div>
+                                    </div>
+                                        <div class="input-group">
+                                        <label class="mx-auto">setzte zurück </label>
+                                        <div class="btn-group btn-block" role="group">
+                                        <div class ="col-sm">
+                                            <label for="toggle-on15">Fahrzeug A</label>
+                                            <input id="toggle-on15" name="toggle" type="checkbox">
+                                        </div>
+                                        <div class ="col-sm">
+                                            <label for="toggle-off15">Fahrzeug B</label>
+                                            <input id="toggle-off15" name="toggle" type="checkbox">
+                                        </div>             
+                                        </div>
+                                    </div>
+                                        <div class="input-group">
+                                        <label class="mx-auto">fuhr in die Gegenfahrbahn </label>
+                                        <div class="btn-group btn-block" role="group">
+                                        <div class ="col-sm">
+                                            <label for="toggle-on16">Fahrzeug A</label>
+                                            <input id="toggle-on16" name="toggle" type="checkbox">
+                                        </div>
+                                        <div class ="col-sm">
+                                            <label for="toggle-off16">Fahrzeug B</label>
+                                            <input id="toggle-off16" name="toggle" type="checkbox">
+                                        </div>             
+                                        </div>
+                                    </div>
+                                        <div class="input-group">
+                                        <label class="mx-auto">kam von rechts </label>
+                                        <div class="btn-group btn-block" role="group">
+                                        <div class ="col-sm">
+                                            <label for="toggle-on17">Fahrzeug A</label>
+                                            <input id="toggle-on17" name="toggle" type="checkbox">
+                                        </div>
+                                        <div class ="col-sm">
+                                            <label for="toggle-off17">Fahrzeug B</label>
+                                            <input id="toggle-off17" name="toggle" type="checkbox">
+                                        </div>             
+                                        </div>
+                                    </div>
+                                        <div class="input-group">
+                                        <label class="mx-auto">beachtete Vorfahrtszeichen nicht </label>
+                                        <div class="btn-group btn-block" role="group">
+                                        <div class ="col-sm">
+                                            <label for="toggle-on18">Fahrzeug A</label>
+                                            <input id="toggle-on18" name="toggle" type="checkbox">
+                                        </div>
+                                        <div class ="col-sm">
+                                            <label for="toggle-off18">Fahrzeug B</label>
+                                            <input id="toggle-off18" name="toggle" type="checkbox">
+                                        </div>             
+                                        </div>
+                                    </div>
+                                </div>
+                                    <hr class="mb-4">
+                                <div class="row">
+                                    <div class="col-6 text-left">
+                                    <input type="submit" value="Submit">           
+                                    </div>
+                                    <div class="col-6 text-right">          
+                                    </div>
+                                </div>
+                                </form>
                             </div>
-                            <div class ="col-sm">
-                            <label for="toggle-off2">Fahrzeug B</label>
-                            <input id="toggle-off2" name="toggle" type="checkbox">
-                            </div>             
-                        </div>
-                    </div>
-                    <div class="input-group">
-                        <label class="mx-auto">fuhr aus der Parkstelle heraus </label>
-                        <div class="btn-group btn-block" role="group">
-                        <div class ="col-sm">
-                        <label for="toggle-on3">Fahrzeug A</label>
-                        <input id="toggle-on3" name="toggle" type="checkbox">
-                        </div>
-                        <div class ="col-sm">
-                        <label for="toggle-off3">Fahrzeug B</label>
-                        <input id="toggle-off3" name="toggle" type="checkbox">
-                        </div>             
-                        </div>
-                    <div class="input-group">
-                        <label class="mx-auto">fuhr in eine Parkstelle hinein </label>
-                        <div class="btn-group btn-block" role="group">
-                        <div class ="col-sm">
-                            <label for="toggle-on4">Fahrzeug A</label>
-                            <input id="toggle-on4" name="toggle" type="checkbox">
-                        </div>
-                        <div class ="col-sm">
-                            <label for="toggle-off4">Fahrzeug B</label>
-                            <input id="toggle-off4" name="toggle" type="checkbox">
-                        </div>             
-                        </div>
-                    </div> 
-                        <div class="input-group">
-                            <label class="mx-auto">fuhr aus einem Parkplatz, aus einem Grundstück oder einem Feldweg/Privatweg heraus </label>
-                            <div class="btn-group btn-block" role="group">
-                            <div class ="col-sm">
-                            <label for="toggle-on5">Fahrzeug A</label>
-                            <input id="toggle-on5" name="toggle" type="checkbox">
-                            </div>
-                            <div class ="col-sm">
-                            <label for="toggle-off5">Fahrzeug B</label>
-                            <input id="toggle-off5" name="toggle" type="checkbox">
-                            </div>             
-                            </div>
-                        </div>
-                            <div class="input-group">
-                            <label class="mx-auto">fuhr auf einen Parkplatz, bog in ein Grundstück oder einen Feldweg/Privatweg ein </label>
-                            <div class="btn-group btn-block" role="group">
-                            <div class ="col-sm">
-                                <label for="toggle-on6">Fahrzeug A</label>
-                                <input id="toggle-on6" name="toggle" type="checkbox">
-                            </div>
-                            <div class ="col-sm">
-                                <label for="toggle-off6">Fahrzeug B</label>
-                                <input id="toggle-off6" name="toggle" type="checkbox">
-                            </div>             
-                            </div>
-                        </div>
-                            <div class="input-group">
-                            <label class="mx-auto">bog in einen Kreisverkehr ein</label>
-                            <div class="btn-group btn-block" role="group">
-                            <div class ="col-sm">
-                                <label for="toggle-on7">Fahrzeug A</label>
-                                <input id="toggle-on7" name="toggle" type="checkbox">
-                            </div>
-                            <div class ="col-sm">
-                                <label for="toggle-off7">Fahrzeug B</label>
-                                <input id="toggle-off7" name="toggle" type="checkbox">
-                            </div>             
-                            </div>
-                        </div>
-                            <div class="input-group">
-                            <label class="mx-auto">fuhr im Kreisverkehr </label>
-                            <div class="btn-group btn-block" role="group">
-                            <div class ="col-sm">
-                                <label for="toggle-on8">Fahrzeug A</label>
-                                <input id="toggle-on8" name="toggle" type="checkbox">
-                            </div>
-                            <div class ="col-sm">
-                                <label for="toggle-off8">Fahrzeug B</label>
-                                <input id="toggle-off8" name="toggle" type="checkbox">
-                            </div>             
-                            </div>
-                        </div>
-                            <div class="input-group">
-                            <label class="mx-auto">fuhr heckseitig auf ein anderes Fahrzeug auf bei Fahrt in dieselbe Richtung und auf derselben Fahrspur </label>
-                            <div class="btn-group btn-block" role="group">
-                            <div class ="col-sm">
-                                <label for="toggle-on9">Fahrzeug A</label>
-                                <input id="toggle-on9" name="toggle" type="checkbox">
-                            </div>
-                            <div class ="col-sm">
-                                <label for="toggle-off9">Fahrzeug B</label>
-                                <input id="toggle-off9" name="toggle" type="checkbox">
-                            </div>             
-                            </div>
-                        </div>
-                            <div class="input-group">
-                            <label class="mx-auto">fuhr in gleicher Richtung, aber in einer anderer Spur </label>
-                            <div class="btn-group btn-block" role="group">
-                            <div class ="col-sm">
-                                <label for="toggle-on10">Fahrzeug A</label>
-                                <input id="toggle-on10" name="toggle" type="checkbox">
-                            </div>
-                            <div class ="col-sm">
-                                <label for="toggle-off10">Fahrzeug B</label>
-                                <input id="toggle-off10" name="toggle" type="checkbox">
-                            </div>             
-                            </div>
-                        </div>
-                            <div class="input-group">
-                            <label class="mx-auto">wechselte die Spur </label>
-                            <div class="btn-group btn-block" role="group">
-                            <div class ="col-sm">
-                                <label for="toggle-on11">Fahrzeug A</label>
-                                <input id="toggle-on11" name="toggle" type="checkbox">
-                            </div>
-                            <div class ="col-sm">
-                                <label for="toggle-off11">Fahrzeug B</label>
-                                <input id="toggle-off11" name="toggle" type="checkbox">
-                            </div>             
-                            </div>
-                        </div>
-                            <div class="input-group">
-                            <label class="mx-auto">überholte </label>
-                            <div class="btn-group btn-block" role="group">
-                            <div class ="col-sm">
-                                <label for="toggle-on12">Fahrzeug A</label>
-                                <input id="toggle-on12" name="toggle" type="checkbox">
-                            </div>
-                            <div class ="col-sm">
-                                <label for="toggle-off12">Fahrzeug B</label>
-                                <input id="toggle-off12" name="toggle" type="checkbox">
-                            </div>             
-                            </div>
-                        </div>
-                            <div class="input-group">
-                            <label class="mx-auto">bog rechts ab </label>
-                            <div class="btn-group btn-block" role="group">
-                            <div class ="col-sm">
-                                <label for="toggle-on13">Fahrzeug A</label>
-                                <input id="toggle-on13" name="toggle" type="checkbox">
-                            </div>
-                            <div class ="col-sm">
-                                <label for="toggle-off13">Fahrzeug B</label>
-                                <input id="toggle-off13" name="toggle" type="checkbox">
-                            </div>             
-                            </div>
-                        </div>
-                            <div class="input-group">
-                            <label class="mx-auto">bog links ab </label>
-                            <div class="btn-group btn-block" role="group">
-                            <div class ="col-sm">
-                                <label for="toggle-on14">Fahrzeug A</label>
-                                <input id="toggle-on14" name="toggle" type="checkbox">
-                            </div>
-                            <div class ="col-sm">
-                                <label for="toggle-off14">Fahrzeug B</label>
-                                <input id="toggle-off14" name="toggle" type="checkbox">
-                            </div>             
-                            </div>
-                        </div>
-                            <div class="input-group">
-                            <label class="mx-auto">setzte zurück </label>
-                            <div class="btn-group btn-block" role="group">
-                            <div class ="col-sm">
-                                <label for="toggle-on15">Fahrzeug A</label>
-                                <input id="toggle-on15" name="toggle" type="checkbox">
-                            </div>
-                            <div class ="col-sm">
-                                <label for="toggle-off15">Fahrzeug B</label>
-                                <input id="toggle-off15" name="toggle" type="checkbox">
-                            </div>             
-                            </div>
-                        </div>
-                            <div class="input-group">
-                            <label class="mx-auto">fuhr in die Gegenfahrbahn </label>
-                            <div class="btn-group btn-block" role="group">
-                            <div class ="col-sm">
-                                <label for="toggle-on16">Fahrzeug A</label>
-                                <input id="toggle-on16" name="toggle" type="checkbox">
-                            </div>
-                            <div class ="col-sm">
-                                <label for="toggle-off16">Fahrzeug B</label>
-                                <input id="toggle-off16" name="toggle" type="checkbox">
-                            </div>             
-                            </div>
-                        </div>
-                            <div class="input-group">
-                            <label class="mx-auto">kam von rechts </label>
-                            <div class="btn-group btn-block" role="group">
-                            <div class ="col-sm">
-                                <label for="toggle-on17">Fahrzeug A</label>
-                                <input id="toggle-on17" name="toggle" type="checkbox">
-                            </div>
-                            <div class ="col-sm">
-                                <label for="toggle-off17">Fahrzeug B</label>
-                                <input id="toggle-off17" name="toggle" type="checkbox">
-                            </div>             
-                            </div>
-                        </div>
-                            <div class="input-group">
-                            <label class="mx-auto">beachtete Vorfahrtszeichen nicht </label>
-                            <div class="btn-group btn-block" role="group">
-                            <div class ="col-sm">
-                                <label for="toggle-on18">Fahrzeug A</label>
-                                <input id="toggle-on18" name="toggle" type="checkbox">
-                            </div>
-                            <div class ="col-sm">
-                                <label for="toggle-off18">Fahrzeug B</label>
-                                <input id="toggle-off18" name="toggle" type="checkbox">
-                            </div>             
-                            </div>
-                        </div>
-                    </div>
-                        <hr class="mb-4">
-                    <div class="row">
-                        <div class="col-6 text-left">
-                        <input type="submit" value="Submit">           
-                        </div>
-                        <div class="col-6 text-right">          
-                        </div>
-                    </div>
-                    </form>
+                  </div>
                 </div>
-
+              </div>
+          </div>
+          
     </div>
     <!-- footer -->
     <footer class="my-5 pt-5 text-muted text-center text-small">
@@ -788,8 +843,9 @@
         </ul>
     </footer>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
-    <script src="form-validation.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
   </body>
   </html>
