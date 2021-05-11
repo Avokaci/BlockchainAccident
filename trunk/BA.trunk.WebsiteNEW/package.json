@@ -1,0 +1,35 @@
+{
+  "name": "eth-accident-blockchain",
+  "version": "1.0.0",
+  "description": "Blockchain Accident Form Powered By Ethereum",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "dev": "lite-server",
+    "test": "echo \"Error: no test specified\" && sexit 1"
+  },
+  "author": "Maral",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "bootstrap": "^4.6.0",
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "chai-bignumber": "^2.0.2",
+    "jest": "^26.6.3",
+    "lite-server": "^2.3.0",
+    "nodemon": "^1.17.3",
+    "parcel-bundler": "^1.12.5",
+    "truffle": "^5.3.2",
+    "truffle-contract": "3.0.6"
+  },
+  "dependencies": {
+    "ipfs-api": "^26.1.2",
+    "ipfs-http-client": "^49.0.4",
+    "php-server": "^0.2.1",
+    "requirejs": "^2.3.6",
+    "web3": "^0.20.6"
+  }
+}
