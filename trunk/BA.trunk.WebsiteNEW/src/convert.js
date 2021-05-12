@@ -89,11 +89,11 @@ const addFormData = (ev)=>{
     //document.querySelector('form').reset();
 
     //for display purposes only
-    /*
+    
     console.warn('added' , {content} );
     let pre = document.querySelector('#msg pre');
     pre.textContent = '\n' + JSON.stringify(content, '\t', 2);
-    */
+    
     //saving to sessionStorage
     sessionStorage.setItem('MydataList', JSON.stringify(content) );
     
