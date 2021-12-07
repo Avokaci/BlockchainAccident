@@ -3,7 +3,10 @@ import SimpleStorageContract from '../build/contracts/SimpleStorage.json'
 import getWeb3 from './utils/getWeb3'
 import ipfs from './ipfs'
 import Navbar from './Navbar'
-
+import StandortDatum from './StandortDatum'
+import FahrzeugA from './FahrzeugA'
+import FahrzeugB from './FahrzeugB'
+import Umstaende from './Umstaende'
 
 import './css/oswald.css'
 import './css/open-sans.css'
@@ -97,6 +100,8 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar account={this.state.account} />
+       
+
         <main className="container">
             <div className="pure-g">
               <div className="pure-u-1-1">
@@ -111,6 +116,14 @@ class App extends Component {
               </div>
             </div>
         </main>
+        <div>
+        <StandortDatum std={this.state.account} />
+        <FahrzeugA std={this.state.account} />
+        <FahrzeugB std={this.state.account} />
+        <Umstaende std={this.state.account} />
+
+
+        </div>
       </div>
     );
   }

@@ -23,36 +23,36 @@ class Main extends Component {
                         <div className="row">
                             <div className="col-md-6 mb-3">
                             <label for="dateofaccident">Datum  des Unfalles</label>
-                            <input type="date" className="form-control" id="dateofaccident" name="dateofaccident" placeholder="" value="" required>
+                            <input type="date" className="form-control" id="dateofaccident" name="dateofaccident" placeholder="" value="" required></input>
                             </div>
                             <div className="col-md-6 mb-3">
                             <label for="timeofaccident">Uhrzeit</label>
-                            <input type="time" className="form-control" id="timeofaccident" name="timeofaccident"placeholder="" value="" required>
+                            <input type="time" className="form-control" id="timeofaccident" name="timeofaccident"placeholder="" value="" required></input>
                             </div>
                         </div>
                         <div className="row">
                             <div className="col-md-5 mb-3">
                             <label for="country">Land</label>
                             <select className="custom-select d-block w-100" id="country" name="country" required>
-                                <option value="">W&#228hlen...</option>
-                                <option>Belgien</option>
+                            <option value="">Wählen...</option>
+                            <option>Belgien</option>
                             <option>Bulgarien </option>
-                            <option>D&#228nemark</option>
+                            <option>Dänemark</option>
                             <option>Deutschland</option>
                             <option>Estland</option>
                             <option>Finnland</option>
                             <option>Frankreich</option>
                             <option>Griechenland</option>
                             <option>Irland</option>
-                                <option>Italien</option>
+                            <option>Italien</option>
                             <option>Kroatien</option>
                             <option>Lettland</option>
                             <option>Litauen</option>
                             <option>Luxemburg</option>
                             <option>Malta</option>
                             <option>Niederlande</option>
-                            <option>&#214sterreich</option>
-                                <option>Polen</option>
+                            <option>Österreich</option>
+                            <option>Polen</option>
                             <option>Rumaenien</option>
                             <option>Schweden</option>
                             <option>Slowakei</option>
@@ -74,11 +74,11 @@ class Main extends Component {
                         <div className="row">
                             <div className="col-md-6 mb-3">
                             <label for="email">Unfallort</label>
-                            <input type="text" className="form-control" id="email" name="email" placeholder="(Straße, Haus-Nr. bzw. Kilometerstein)" required>
+                            <input type="text" className="form-control" id="email" name="email" placeholder="(Straße, Haus-Nr. bzw. Kilometerstein)" required></input>
                             </div>
                             <div className="col-md-2 mb-3">
                             <label for="hw-classification">PLZ</label>
-                            <input type="text" id="plz" name="plz" className="form-control" placeholder="1170" value="" required>
+                            <input type="text" id="plz" name="plz" className="form-control" placeholder="1170" value="" required></input>
                             </div>                            
                         </div>
                         <div className="row">
@@ -95,7 +95,7 @@ class Main extends Component {
                             </select>
                             </div> 
                         </div>       
-                        <hr className="mb-4">
+                        <hr className="mb-4"></hr>
                         <div className="row">
                             <div className="col-6 text-left">      
                             </div>
