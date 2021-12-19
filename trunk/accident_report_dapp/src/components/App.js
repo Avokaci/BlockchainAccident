@@ -162,146 +162,193 @@ class App extends Component {
                           <br/>
                             <h2> Allgemein </h2>
                             <p> Die unten beschriebenen Vorgehensweisen zum Fotografieren, sollen eine praktische Unterstützungshilfe zur Erstellung einer kompletten, aussagekräftigen Fotodokumentation bieten. </p>
-                            <img  src={Allgemein} alt="Allgemein"  height="320" width="750"/>
+                            <img  src={Allgemein} alt="Allgemein"  class="img-fluid"/>
                             
                             <h2>Übersichtsfotos</h2>
                             <h3>Fahrzeug A</h3>
-                            <label>Übersichtsfoto, diagonal gesamte Fahrzeugfront und linke Seite</label>
-                            <input type='file' onChange={this.captureFile} />
-                            <br/>
-                            <br/>
 
-                            <label>Übersichtsfoto, diagonal gesamtes Fahrzeugheck und linke Seite</label>
-                            <input type='file' onChange={this.captureFile} />
-                            <br/>
-                            <br/>
-
-                            <label>Übersichtsfoto, diagonal gesamtes Fahrzeugheck und rechte Seite</label>
-                            <input type='file' onChange={this.captureFile} />
-                            <br/>
-                            <br/>
-
-                            <label>Übersichtsfoto, diagonal gesamte Fahrzeugfront und rechte Seite</label>
-                            <input type='file' onChange={this.captureFile} />
-                            <br/>
-                            <br/>
-
-                            <label>Zulassungsschein</label>
-                            <input type='file' onChange={this.captureFile} />
-                            <br/>
-                            <br/>
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col"></th>
+                                  <th scope="col"></th>  
+                                </tr>
+                              </thead>
+                              <tbody>
+                              <tr>
+                                <td><label>Übersichtsfoto, diagonal gesamte Fahrzeugfront und linke Seite</label></td>
+                                <td><input type='file' onChange={this.captureFile} /></td>
+                              </tr>
+                              <tr>
+                                <td><label>Übersichtsfoto, diagonal gesamtes Fahrzeugheck und rechte Seite</label></td>
+                                <td><input type='file' onChange={this.captureFile} /></td>
+                              </tr>
+                              <tr>
+                                <td><label>Übersichtsfoto, diagonal gesamte Fahrzeugfront und rechte Seite</label></td>
+                                <td><input type='file' onChange={this.captureFile} /></td>
+                              </tr>
+                              <tr>
+                                <td><label>Zulassungsschein</label></td>
+                                <td><input type='file' onChange={this.captureFile} /></td>
+                              </tr>
+                              </tbody>
+                            </table>
 
                             <h3>Fahrzeug B</h3>
-                            <label>Übersichtsfoto, diagonal gesamte Fahrzeugfront und linke Seite</label>
-                            <input type='file' onChange={this.captureFile} />
-                            <br/>
-                            <br/>
-
-                            <label>Übersichtsfoto, diagonal gesamtes Fahrzeugheck und linke Seite</label>
-                            <input type='file' onChange={this.captureFile} />
-                            <br/>
-                            <br/>
-
-                            <label>Übersichtsfoto, diagonal gesamtes Fahrzeugheck und rechte Seite</label>
-                            <input type='file' onChange={this.captureFile} />
-                            <br/>
-                            <br/>
-
-                            <label>Übersichtsfoto, diagonal gesamte Fahrzeugfront und rechte Seite</label>
-                            <input type='file' onChange={this.captureFile} />
-                            <br/>
-                            <br/>
-
-                            <label>Zulassungsschein</label>
-                            <input type='file' onChange={this.captureFile} />
-                            <br/>
-                            <br/>                  
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col"></th>
+                                  <th scope="col"></th>  
+                                </tr>
+                              </thead>
+                              <tbody>
+                              <tr>
+                                <td><label>Übersichtsfoto, diagonal gesamte Fahrzeugfront und linke Seite</label></td>
+                                <td><input type='file' onChange={this.captureFile} /></td>
+                              </tr>
+                              <tr>
+                                <td><label>Übersichtsfoto, diagonal gesamtes Fahrzeugheck und rechte Seite</label></td>
+                                <td><input type='file' onChange={this.captureFile} /></td>
+                              </tr>
+                              <tr>
+                                <td><label>Übersichtsfoto, diagonal gesamte Fahrzeugfront und rechte Seite</label></td>
+                                <td><input type='file' onChange={this.captureFile} /></td>
+                              </tr>
+                              <tr>
+                                <td><label>Zulassungsschein</label></td>
+                                <td><input type='file' onChange={this.captureFile} /></td>
+                              </tr>
+                              </tbody>
+                            </table>
 
                             <h2>Detailaufnahmen des Schadens</h2>
                             <h3>Fahrzeug A</h3>
 
-                            <label>Gesamtbild (aus einer gewissen Entfernung zum Fahrzeug)</label>
-                            <input type='file' onChange={this.captureFile} />
-                            <br/>
-                            <br/>
-
-                            <label>Detailaufnahmen aller Schäden I</label>
-                            <input type='file' onChange={this.captureFile} />
-                            <br/>
-                            <br/>
-
-                            <label>Detailaufnahmen aller Schäden II</label>
-                            <input type='file' onChange={this.captureFile} />
-                            <br/>
-                            <br/>
-
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col"></th>
+                                  <th scope="col"></th>  
+                                </tr>
+                              </thead>
+                              <tbody>
+                              <tr>
+                                <td><label>Gesamtbild (aus einer gewissen Entfernung zum Fahrzeug)</label></td>
+                                <td><input type='file' onChange={this.captureFile} /></td>
+                              </tr>
+                              <tr>
+                                <td><label>Detailaufnahmen aller Schäden I</label></td>
+                                <td><input type='file' onChange={this.captureFile} /></td>
+                              </tr>
+                              <tr>
+                                <td><label>Detailaufnahmen aller Schäden II</label></td>
+                                <td><input type='file' onChange={this.captureFile} /></td>
+                              </tr>                         
+                              </tbody>
+                            </table>
+                   
                             <h3>Fahrzeug B</h3>
 
-                            <label>Gesamtbild (aus einer gewissen Entfernung zum Fahrzeug)</label>
-                            <input type='file' onChange={this.captureFile} />
-                            <br/>
-                            <br/>
-
-                            <label>Detailaufnahmen aller Schäden I</label>
-                            <input type='file' onChange={this.captureFile} />
-                            <br/>
-                            <br/>
-
-                            <label>Detailaufnahmen aller Schäden II</label>
-                            <input type='file' onChange={this.captureFile} />
-                            <br/>
-                            <br/>
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col"></th>
+                                  <th scope="col"></th>  
+                                </tr>
+                              </thead>
+                              <tbody>
+                              <tr>
+                                <td><label>Gesamtbild (aus einer gewissen Entfernung zum Fahrzeug)</label></td>
+                                <td><input type='file' onChange={this.captureFile} /></td>
+                              </tr>
+                              <tr>
+                                <td><label>Detailaufnahmen aller Schäden I</label></td>
+                                <td><input type='file' onChange={this.captureFile} /></td>
+                              </tr>
+                              <tr>
+                                <td><label>Detailaufnahmen aller Schäden II</label></td>
+                                <td><input type='file' onChange={this.captureFile} /></td>
+                              </tr>                         
+                              </tbody>
+                            </table>
 
                             <h2>Spaltmasse dokumentieren bei sichtbarer Veränderung</h2>
                             <h3>Fahrzeug A</h3>
-
                             <h5>Hinweis: Spaltmasse jeweils zur Gegenseite vergleichen und mit Foto dokumentieren.</h5>
-                            <input type='file' onChange={this.captureFile} />
-                            <br/>
-                            <br/>
-                            <input type='file' onChange={this.captureFile} />
-                            <br/>
-                            <br/>
-                            <input type='file' onChange={this.captureFile} />
-                            <br/>
-                            <br/> 
-                            <input type='file' onChange={this.captureFile} />
-                            <br/>
-                            <br/> 
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col"></th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                              <tr>
+                                <td><input type='file' onChange={this.captureFile} /></td>
+                              </tr>
+                              <tr>
+                                <td><input type='file' onChange={this.captureFile} /></td>
+                              </tr>
+                              <tr>
+                                <td><input type='file' onChange={this.captureFile} /></td>
+                              </tr>  
+                              <tr>
+                                <td><input type='file' onChange={this.captureFile} /></td>
+                              </tr>                
+                              </tbody>
+                            </table>
+
 
                             <h3>Fahrzeug B</h3>
 
                             <h5>Hinweis: Spaltmasse jeweils zur Gegenseite vergleichen und mit Foto dokumentieren.</h5>
-                            <input type='file' onChange={this.captureFile} />
-                            <br/>
-                            <br/>
-                            <input type='file' onChange={this.captureFile} />
-                            <br/>
-                            <br/> 
-                            <input type='file' onChange={this.captureFile} />
-                            <br/>
-                            <br/> 
-                            <input type='file' onChange={this.captureFile} />
-                            <br/>
-                            <br/>
-
-                            <h2>FAHRZEUGINNENRAUM (bei Auslösung SRS - Airbag-Systeme oder Totalschadenverdacht)</h2>
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col"></th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                              <tr>
+                                <td><input type='file' onChange={this.captureFile} /></td>
+                              </tr>
+                              <tr>
+                                <td><input type='file' onChange={this.captureFile} /></td>
+                              </tr>
+                              <tr>
+                                <td><input type='file' onChange={this.captureFile} /></td>
+                              </tr>  
+                              <tr>
+                                <td><input type='file' onChange={this.captureFile} /></td>
+                              </tr>                
+                              </tbody>
+                            </table>
+                            <h2>Fahrzeuginnenraum (bei Auslösung SRS - Airbag-Systeme oder Totalschadenverdacht)</h2>
                             <h3>Fahrzeug A</h3>
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col"></th>
+                                  <th scope="col"></th>  
+                                </tr>
+                              </thead>
+                              <tbody>
+                              <tr>
+                                <td><label>Armaturenbrett inkl. Mittelkonsole</label></td>
+                                <td><input type='file' onChange={this.captureFile} /></td>
+                              </tr>
+                              <tr>
+                                <td><label>Innenraum Front (inkl. allfällig ausgelöster Airbags) – zwingend bei Auffahrkollision</label></td>
+                                <td><input type='file' onChange={this.captureFile} /></td>
+                              </tr>
+                              <tr>
+                                <td><label>Innenraum hinten (inkl. allfällig ausgelöster Airbags) – zwingend bei Auffahrkollision</label></td>
+                                <td><input type='file' onChange={this.captureFile} /></td>
+                              </tr>                         
+                              </tbody>
+                            </table>
 
-                            <label>Armaturenbrett inkl. Mittelkonsole</label>
-                            <input type='file' onChange={this.captureFile} />
-                            <br/>
-                            <br/>
 
-                            <label>Innenraum Front (inkl. allfällig ausgelöster Airbags) – zwingend bei Auffahrkollision</label>
-                            <input type='file' onChange={this.captureFile} />
-                            <br/>
-                            <br/>
-
-                            <label>Innenraum hinten (inkl. allfällig ausgelöster Airbags) – zwingend bei Auffahrkollision</label>
-                            <input type='file' onChange={this.captureFile} />
-                            <br/>
-                            <br/>
 
                             <h4>Sicherheitsgurt fotografieren</h4>
                             <p>1. Hängt der Gurt gestrafft an der B-Säule, den Gurt spannen, fotografieren und zusätzlich einen deutlichen Textvermerk erstellen.</p>
@@ -313,20 +360,28 @@ class App extends Component {
 
                             <h3>Fahrzeug B</h3>
 
-                            <label>Armaturenbrett inkl. Mittelkonsole</label>
-                            <input type='file' onChange={this.captureFile} />
-                            <br/>
-                            <br/>
-
-                            <label>Innenraum Front (inkl. allfällig ausgelöster Airbags) – zwingend bei Auffahrkollision</label>
-                            <input type='file' onChange={this.captureFile} />
-                            <br/>
-                            <br/>
-
-                            <label>Innenraum hinten (inkl. allfällig ausgelöster Airbags) – zwingend bei Auffahrkollision</label>
-                            <input type='file' onChange={this.captureFile} />
-                            <br/>
-                            <br/>
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col"></th>
+                                  <th scope="col"></th>  
+                                </tr>
+                              </thead>
+                              <tbody>
+                              <tr>
+                                <td><label>Armaturenbrett inkl. Mittelkonsole</label></td>
+                                <td><input type='file' onChange={this.captureFile} /></td>
+                              </tr>
+                              <tr>
+                                <td><label>Innenraum Front (inkl. allfällig ausgelöster Airbags) – zwingend bei Auffahrkollision</label></td>
+                                <td><input type='file' onChange={this.captureFile} /></td>
+                              </tr>
+                              <tr>
+                                <td><label>Innenraum hinten (inkl. allfällig ausgelöster Airbags) – zwingend bei Auffahrkollision</label></td>
+                                <td><input type='file' onChange={this.captureFile} /></td>
+                              </tr>                         
+                              </tbody>
+                            </table>
 
                             <h4>Sicherheitsgurt fotografieren</h4>
                             <p>1. Hängt der Gurt gestrafft an der B-Säule, den Gurt spannen, fotografieren und zusätzlich einen deutlichen Textvermerk erstellen.</p>
@@ -339,40 +394,62 @@ class App extends Component {
                             <h2>Weitere Fotos</h2>
 
                             <h3>Fahrzeug A </h3>
-
-                            <input type='file' onChange={this.captureFile} />
-                            <br/>
-                            <br/>
-
-                            <input type='file' onChange={this.captureFile} />
-                            <br/>
-                            <br/>
-
-                            <input type='file' onChange={this.captureFile} />
-                            <br/>
-                            <br/>
-
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col"></th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                              <tr>
+                                <td><input type='file' onChange={this.captureFile} /></td>
+                              </tr>
+                              <tr>
+                                <td><input type='file' onChange={this.captureFile} /></td>
+                              </tr>
+                              <tr>
+                                <td><input type='file' onChange={this.captureFile} /></td>
+                              </tr>                                           
+                              </tbody>
+                            </table>
                             <h3>Fahrzeug B</h3>
-                            <input type='file' onChange={this.captureFile} />
-                            <br/>
-                            <br/>
-
-                            <input type='file' onChange={this.captureFile} />
-                            <br/>
-                            <br/>
-
-                            <input type='file' className="file" onChange={this.captureFile} />
-                            <br/>
-                            <br/>
-
-                            <label className="importantLabel">Stellen Sie sicher, dass Sie auf "Bestätigen" in "Umstände" geklickt haben (siehe oben), bevor Sie auf „Senden“ klicken.</label>
-                            <input type='submit' id="submit" value="Hochladen & senden"/>
-                            <div id="noImgs">
-                                <pre></pre>
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col"></th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                              <tr>
+                                <td><input type='file' onChange={this.captureFile} /></td>
+                              </tr>
+                              <tr>
+                                <td><input type='file' onChange={this.captureFile} /></td>
+                              </tr>
+                              <tr>
+                                <td><input type='file' onChange={this.captureFile} /></td>
+                              </tr>                                           
+                              </tbody>
+                            </table>
+                            <div className="row">
+                                    <div class="col-5"></div>
+                                    <div class="col">
+                                      <div className="col-5">
+                                        <label className="importantLabel">Stellen Sie sicher, dass Sie auf "Bestätigen" in "Umstände" geklickt haben (siehe oben), bevor Sie auf „Senden“ klicken.</label>
+                                        <input type='submit' id="submit" value="Hochladen & senden" class="btn btn-success"/>
+                                        <div id="noImgs">
+                                            <pre></pre>
+                                        </div>
+                                        <div id="countImgs">
+                                            <pre></pre>
+                                        </div>        
+                                      </div>
+                                      <div id="bMsg">
+                                      <pre></pre>
+                                      </div>
+                                    </div>                                
                             </div>
-                            <div id="countImgs">
-                                <pre></pre>
-                            </div>
+                            
                         </div>
                       </div>
                     </CollapsibleContent>

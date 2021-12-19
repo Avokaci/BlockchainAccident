@@ -25,12 +25,12 @@ class Main extends Component {
                             <label htmlFor="dateofaccident">
                                 Datum des Unfalles
                             </label>
-                            <input type="text" className="form-control" id="dateofaccident" name="dateofaccident" required />
+                            <input type="date" className="form-control" id="dateofaccident" name="dateofaccident" required />
                             </div>
                             <div className="col-md-6 mb-3">
                             <br/>
                             <label htmlFor="timeofaccident">Uhrzeit</label>
-                            <input type="text" className="form-control" id="timeofaccident" name="timeofaccident" required />
+                            <input type="time" className="form-control" id="timeofaccident" name="timeofaccident" required />
                             </div>
                         </div>
                         <div className="row">
@@ -73,6 +73,13 @@ class Main extends Component {
                                 <option value="Yes">Yes</option>
                                 </select>
                             </div>
+                            <div className="col-md-5 mb-3">
+                            <label htmlFor="state">Andere Sachschäden als an den Fahrzeugen A u. B</label>
+                            <select className="custom-select d-block w-100" id="sachschaeden" required>
+                            <option value="Yes">Ja</option>
+                            <option value="No">Nein</option>
+                            </select>
+                            </div> 
                         </div>
                         <div className="row">
                             <div className="col-md-6 mb-3">
@@ -85,18 +92,12 @@ class Main extends Component {
                             </div>                            
                         </div>
                         <div className="row">
-                            <div className="col-md-6 mb-3">
+                            <div className="col-md-8 mb-3">
                                 <label htmlFor="node1">Zeugen (Name, Anschrift, Telefon; Insassen von A und B unterstreichen)</label>
                                 <textarea id="zeugen" placeholder=" Zeugen..(Name, Anschrift, Telefon; Insassen von A und B unterstreichen)" rows="5" cols="79" name="description" className="form-control"></textarea>
                             </div>                   
                                               
-                            <div className="col-md-2 mb-3">
-                            <label htmlFor="state">Andere Sachschäden als an den Fahrzeugen A u. B</label>
-                            <select className="custom-select d-block w-100" id="sachschaeden" required>
-                            <option value="Yes">Ja</option>
-                            <option value="No">Nein</option>
-                            </select>
-                            </div> 
+                           
                         </div>
                     </CollapsibleContent>
 
@@ -160,7 +161,7 @@ class Main extends Component {
                                     <option>Zypern</option>
                                     </select>
                                     </div>
-                                    <div className="col-md-2 mb-3">
+                                    <div className="col-md-5 mb-3">
                                         <label htmlFor="state">Besteht Berechtigung zum Vorsteuerabzug??</label>
                                         <select className="custom-select d-block w-100" id="versState" required>
                                         <option value="Yes">Ja</option>
@@ -223,7 +224,7 @@ class Main extends Component {
                                     <label htmlFor="dateofaccident">Versicherungsausweis oder Grüne Karte gültig bis</label>
                                     <input type="text" id="gueltigkeitsdatum" className="form-control" />
                                     </div> 
-                                    <div className="col-md-2 mb-3">
+                                    <div className="col-md-4 mb-3">
                                         <label htmlFor="state">Besteht eine Vollkaskoversicherung?</label>
                                         <select className="custom-select d-block w-100" id="volkasko" required>
                                         <option value="Yes">Ja</option>
@@ -351,7 +352,7 @@ class Main extends Component {
                                     <option>Zypern</option>
                                     </select>
                                     </div>
-                                    <div className="col-md-2 mb-3">
+                                    <div className="col-md-5 mb-3">
                                         <label htmlFor="state">Besteht Berechtigung zum Vorsteuerabzug??</label>
                                         <select className="custom-select d-block w-100" id="versStateB" required>
                                         <option value="Yes">Ja</option>
@@ -414,7 +415,7 @@ class Main extends Component {
                                     <label htmlFor="dateofaccident">Versicherungsausweis oder Grüne Karte gültig bis</label>
                                     <input type="text" id="gueltigkeitsdatumB" className="form-control" />
                                     </div>                
-                                     <div className="col-md-2 mb-3">
+                                     <div className="col-md-4 mb-3">
                                         <label htmlFor="state">Besteht eine Vollkaskoversicherung?</label>
                                         <select className="custom-select d-block w-100" id="volkaskoB" required>
                                         <option value="Yes">Ja</option>
@@ -721,13 +722,18 @@ class Main extends Component {
                                     </div>
                                 </div>
                                 <div className="row">
-                                    <div className="col-6 text-left">
-                                        <label className="importantLabel">Stellen Sie sicher, dass die Daten in Ihrem Formular vollständig und korrekt sind, bevor Sie auf „Bestätigen“ klicken!</label>
-                                        <input type="submit" id="btn" value="Bestätigen" />           
-                                    </div>
-                                    <div id="bMsg">
+                                    <div class="col-5"></div>
+                                    <div class="col">
+                                        <div className="col-5">
+                                            <label className="importantLabel">Stellen Sie sicher, dass die Daten in Ihrem Formular vollständig und korrekt sind, bevor Sie auf „Bestätigen“ klicken!</label>
+                                            <input type="submit" id="btn" value="Bestätigen"  class="btn btn-success"/>           
+                                        </div>
+                                        <div id="bMsg">
                                         <pre></pre>
+                                        </div>
                                     </div>
+
+                                   
                                 </div>
                                 </div>
                     </CollapsibleContent>
